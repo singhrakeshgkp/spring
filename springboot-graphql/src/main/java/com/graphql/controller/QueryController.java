@@ -49,6 +49,7 @@ public class QueryController {
 	public Article article(@Argument Integer id) {
 		Optional<Article> optional = articleRepository.findById(id);
 		if(optional.isPresent()) {
+			//return if its not null
 			return optional.get();
 		}else {
 			return null;
