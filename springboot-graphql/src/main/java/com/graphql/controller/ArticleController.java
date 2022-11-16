@@ -1,4 +1,4 @@
-package com.graphql.resolver;
+package com.graphql.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import com.graphql.repository.ProfileRepository;
 
 @Controller
 @Transactional
-public class ArticleResolver {
+public class ArticleController {
 
 	@Autowired
 	private ProfileRepository profileRepository;

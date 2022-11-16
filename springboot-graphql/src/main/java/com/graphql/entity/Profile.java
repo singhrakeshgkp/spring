@@ -23,7 +23,7 @@ public class Profile {
     private Integer id;
     
     @Column(name="user_name")
-    private String username;
+    private String userName;
     
     @Column(name= "bio")
     private String bio;
