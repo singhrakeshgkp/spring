@@ -34,3 +34,8 @@ for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSprin
 Fragments are resuable things in GraphQL. We can assume fragments like a function in programming language.
 for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/fragments.md)\
 
+### Mutation
+GraphQL is not just about queries, it also provides a way to manipulate the data. This is where GraphQL mutation comes into picture.
+for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/mutation.md)\
+
+
