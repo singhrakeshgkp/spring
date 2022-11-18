@@ -15,6 +15,7 @@ GraphQL is an specification or query language for api
 4. Create GraphQL Resolvers
 5. Run and test your application from postman
 URL- http://localhost:8787/graphql
+http://localhost:8080/graphiql?path=/graphql(if u want to test in browser)
 
 ### Different Type of Queries
 for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/GraphQLQueriesAndResponse.md)\
