@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Table(name="comment")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comment {
+public class Comment  implements BaseEntity{
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

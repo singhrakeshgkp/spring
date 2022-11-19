@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Table(name="profile")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Profile {
+public class Profile implements BaseEntity {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +27,6 @@ public class Profile {
     
     @Column(name= "bio")
     private String bio;
+
+	
 }

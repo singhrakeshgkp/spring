@@ -1,4 +1,8 @@
-type Article{
+interface BaseEntity{
+id: Int!
+}
+
+type Article implements BaseEntity{
 id: Int!
 title: String!
 text : String!
@@ -6,14 +10,16 @@ author: Profile!
 comments: [Comment]
 }
 
-type Profile{
+type Profile implements BaseEntity{
 id: Int!
 userName: String!
 bio: String
 }
 
-type Comment{
+type Comment implements BaseEntity{
  id: Int!
  text: String!
  author: Profile!
 }
+
+union AllArtileAndProfile = Article | Profile

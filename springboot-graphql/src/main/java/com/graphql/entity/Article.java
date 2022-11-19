@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Table(name="article")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Article {
+public class Article implements BaseEntity {
 
 	@Id
 	@Column(name="id")

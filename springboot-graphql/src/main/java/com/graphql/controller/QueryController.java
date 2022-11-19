@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import com.graphql.entity.Article;
+import com.graphql.entity.BaseEntity;
 import com.graphql.entity.Comment;
 import com.graphql.entity.Profile;
 import com.graphql.repository.ArticleRepository;
@@ -55,4 +56,23 @@ public class QueryController {
 			return null;
 		}
 	}
+	
+	@QueryMapping
+	public List allArticleAndProfile() {
+		List list1 = profileRepository.findAll();
+		List list2 = articleRepository.findAll();
+		list1.addAll(list2);
+		return list1;
+	}
+	
+	
+	@QueryMapping
+	public List<BaseEntity> getAllEntity() {
+		List list1 = profileRepository.findAll();
+		List list2 = articleRepository.findAll();
+		list1.addAll(list2);
+		return list1;
+	}
+	
+	
 }
