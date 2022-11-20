@@ -1,5 +1,9 @@
 # GraphQLWithSpringBoot
 GraphQL is an specification or query language for api
+### GraphQL Consist three main parts
+ * Guery
+ * Mutation
+ * Subscription
 
 ### Building your first GraphQL Application.
 1. Create a spring boot program and Add following dependencies in pom.xml file\
