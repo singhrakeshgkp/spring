@@ -43,4 +43,5 @@ for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSprin
 GraphQL is not just about queries, it also provides a way to manipulate the data. This is where GraphQL mutation comes into picture.
 for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/mutation.md)\
 
-
+### Subscription
+ In case of query we send single request from client and get single response back from server. But in case of subscription its completely different. we send single request but then we get back stream of messages back.
