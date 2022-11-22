@@ -81,6 +81,7 @@
 			</plugin>
 
 		</plugins>
+		<finalName>springboot-graphql-docker</finalName>
 	</build>
 
 </project>

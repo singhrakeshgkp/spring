@@ -6,8 +6,8 @@ spring:
     hibernate:
       ddl-auto: create
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/graphqltest
-    username: root
+    url: jdbc:mysql://mysqldb:3306/graphqltest
+    username: sysuser
     password: root
     
     
