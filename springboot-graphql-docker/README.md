@@ -1,36 +1,29 @@
-# GraphQLWithSpringBoot
-GraphQL is an specification or query language for api
-
-### Building your first GraphQL Application.
-1. Create a spring boot program and Add following dependencies in pom.xml file\
-  a. graphql-java-tools (for more details click  [here](https://github.com/graphql-java-kickstart/graphql-java-tools/blob/master/README.md))\
-  b.  graphql-spring-boot-starter (for more details click [here](https://github.com/graphql-java-kickstart/graphql-spring-boot)\
-  apart from above dependencies we need to add lombok spring data jpa and sql connector dependencies if we want to communicate with database
-2. Add following properties in application.yml file\
-  server:
-  http2:
-    enabled: true
-  port: 8787
-3. Create GraphQL Schema.
-4. Create GraphQL Resolvers
-5. Run and test your application from postman
-URL- http://localhost:8787/graphql
-
-### Different Type of Queries
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/GraphQLQueriesAndResponse.md)\
-
-### Resolvers
-For Query we have GraphQLQueryResolver.</br>
-Note:- GraphQLQueryResolver is the main resolver, used to resolve any properties or operations within **Query** type
-to resolve a specific properties, the library will look for any methods matching the property name. For example, the articles properties within **Query** will be matched to a method called articles(), getArticles() or isArticles().
-for any other type we use GraphQLResolver
-
-### Running GraphQL Mockserver
-
-### Union and Interface
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/union_interface.md)\
-
-### Fragments
-Fragments are resuable things in GraphQL. We can assume fragments like a function in programming language.
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/fragments.md)\
-
+# Spring Boot with Docker
+What is docker?\
+(for more details click  [here](https://docs.docker.com/get-started/overview/))\
+### Setup Frist Spring Boot Docker Project
+1. Create Spring boot application.
+2. Add Dockerfile in the root directory. Specify the required properties in docker file(for more details about dockerfile click  [here](https://docs.docker.com/engine/reference/builder/
+))\ 
+3. Create docker image. To create docker image follow below steps.
+   * Open command prompt
+   * Navigate to your project root directory whrere dockerfile is present
+   * run docker build -t springboot-graphql-docker.jar[jar name] .[root directory]
+   * Verify the docker image using command docker image ls, your image should be there.
+ 4. Run docker image using command  docker run -p 8181:8787 springboot-graphql-docker.jar
+ 5. since we have used mysql with our spring boot application so application will not run. First we need to create docker network for mysql database. To create Docker network follow below steps.
+  * Run command docker pull mysql:5.7
+  * create docker network for spring boot application to communicate with mysql database. Here is the command to create docker network docker network create               springboot-mysql-net
+  * Run the mysql container in the network. Use below command to run it.
+    docker run -it --name mysqldb --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=graphqltest -e MYSQL_USER=sysuser -e MYSQL_PASSWORD=root     -d mysql:5.7
+  * Now lets verify if mysql is running. docker exec -it 679d9abd108ce0a5436c707d90483201e1f2b1c54398896b16c55ae568ed12f1 bash
+    mysql -u sysuser -p graphqltest \
+    show databases; \
+ 6. Modify your application.yml or properties file (replace localhost with mysqldb:3306 syntax present in db url section)
+ 7. Now build and run docker image again. this time we need to use below command to run docker application on the same network
+    docker run --network=springboot-mysql-net --name springboot-container -p 8181:8787 -d springboot-graphql-docker.jar
+ 8. Test the application. URL http://localhost:8181/graphiql?path=/graphql#
+    
+    
+  
+     
