@@ -1,0 +1,9 @@
+type Query{
+
+articles: [Article]!
+profiles: [Profile]
+comments: [Comment]
+article(id: Int!): Article
+allArticleAndProfile :[AllArtileAndProfile]
+getAllEntity: [BaseEntity]
+}
