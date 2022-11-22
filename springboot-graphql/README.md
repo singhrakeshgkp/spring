@@ -1,5 +1,9 @@
 # GraphQLWithSpringBoot
 GraphQL is an specification or query language for api
+### GraphQL Consist three main parts
+ * Guery
+ * Mutation
+ * Subscription
 
 ### Building your first GraphQL Application.
 1. Create a spring boot program and Add following dependencies in pom.xml file\
@@ -15,6 +19,7 @@ GraphQL is an specification or query language for api
 4. Create GraphQL Resolvers
 5. Run and test your application from postman
 URL- http://localhost:8787/graphql
+http://localhost:8080/graphiql?path=/graphql(if u want to test in browser)
 
 ### Different Type of Queries
 for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/GraphQLQueriesAndResponse.md)\
@@ -34,3 +39,9 @@ for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSprin
 Fragments are resuable things in GraphQL. We can assume fragments like a function in programming language.
 for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/fragments.md)\
 
+### Mutation
+GraphQL is not just about queries, it also provides a way to manipulate the data. This is where GraphQL mutation comes into picture.
+for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/mutation.md)\
+
+### Subscription
+ In case of query we send single request from client and get single response back from server. But in case of subscription its completely different. we send single request but then we get back stream of messages back.
