@@ -8,7 +8,8 @@ What is docker?\
 3. Create docker image. To create docker image follow below steps.
    * Open command prompt
    * Navigate to your project root directory whrere dockerfile is present
-   * run docker build -t springboot-graphql-docker.jar[jar name] .[root directory]
+   * run below command
+     ```docker build -t springboot-graphql-docker.jar[jar name] .[root directory]```
    * Verify the docker image using command docker image ls, your image should be there.
  4. Run docker image using command  docker run -p 8181:8787 springboot-graphql-docker.jar
  5. since we have used mysql with our spring boot application so application will not run. First we need to create docker network for mysql database. To create Docker network follow below steps.
