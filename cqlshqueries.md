@@ -1,4 +1,5 @@
-# Consistency
+# CQL - Queries
+### Consistency
   - Quorum = (Partition+1)%2
   - Run ``` consistency ``` see currrent consistency level
   - Command ``` consistency <consistency level> ``` will set specified consistency
@@ -35,3 +36,39 @@
    
 </p>
 </details>
+
+### Timestamps, TTLs, Collections and Secondary Indexes
+  - Timestamps- we can check what was the last time when data was written in a specific column in cassandra
+  ```
+  select  country, name, addressline1, writetime(name) from student_by_address;
+  ```
+  - TTL(Time To Leave) -  for how long changes will be available, for exmaple below query update the name column value for 30 sec only, post that value become null.
+    it's useful where data is valid for certain period of time only.
+  ```
+   ->updae command with TTL
+   update student_by_address set name='Ranvijay Singh' where addressline1='GKP' and id=2; -> Simple update command
+  ```
+  - Collections
+    - Collections queries
+    ```
+    alter table student_by_id add mob set<text>;
+    update employee_by_id set mob={'983874334','5104537845'} where id=1;        -> this will add collection of mob number in the specified column
+    update employee_by_id set mob=mob+{'983874334','5104537845'} where id=1;    -> will add the new value in existing collection
+    update student_by_id set mob=mob-{'983874334','5104537845'} where id=1;     -> remove the mobile number from existing one
+    update student_by_id set mob={} where id=1;                                 -> remove all mob number
+    ```
+  - Secondary Indexes
+    - if we try to query something using column which is not part of primary key, we can not access the data
+    - If we add ``` allow filtering  ``` in the query then cassandra will allow us to fetch the record. This is not recommended as its unperformant way
+    ```
+    select * from student_by_id where name='RAKESH' allow filtering;
+    ```
+    - Using secondary index we can query record using column which is not part of primary key.
+    ```
+    create index on student_by_id(name);
+    select * from student_by_id where name='RAKESH' ;
+    ```
+# UUID Counters
+  - fd
+  - j
+
