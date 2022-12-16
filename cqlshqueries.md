@@ -68,7 +68,30 @@
     create index on student_by_id(name);
     select * from student_by_id where name='RAKESH' ;
     ```
-# UUID Counters
-  - fd
-  - j
+### UUID Counters
+  - UUID -  support two type of uuid
+    - Normal UUID
+      - Generate uniqu id
+        ```
+        create table student_by_uuid (id uuid, full_name text, email text);
+        insert into student_by_uuid(id,full_name,email) values(uuid(),'rakesh sing','rk@gmail.com');
+
+        ```
+      - 
+    - Time UUID 
+      - time component of uuid to store the data in database chronologically 
+        ```
+        create table student_by_timeuuid (id timeuuid primary key, full_name text, email text);
+        insert into student_by_timeuuid(id,full_name,email) values(now(),'raghadfdfddra sing','dfdfk@gmail.com');
+        ```
+  - Counters-> special kind of column in cassendra that stores integer which only changes increment or decrement. Keeping track of counter in distributed database
+    is a challenge. There are some limitations on counter column in cassendra.
+    - They only can be created on dedicated tables.
+    - They can't be assign to column that serves as a primary key or partition key
+    - we can also not index or delete counter column.
+    - it has counter data type
+    ```
+       create table fee_by_student_id (id uuid primary key, noOfMFS counter);
+       update  fee_by_student_id set noOfMFS = noOfMFS+1 where id= uuid(); -> insert is not allowed for counter column as it can only be incr or decremented
+    ```
 
