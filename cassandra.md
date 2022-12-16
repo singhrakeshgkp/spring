@@ -24,6 +24,8 @@
   </p>
     
   </details>
+ </p>
+</details>
   
 <details> <summary><b>Cassandra Core</b></summary>
 <p>
