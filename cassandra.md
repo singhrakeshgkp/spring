@@ -66,10 +66,20 @@
        - ``` drop keyspace <keyspace name> ``` will drop the specified keyspace
        - ``` use <keyspace name> ``` will move u on the create keyspace
      - Creating table
-       - 
-       - 
+     
       ```
        CREATE TABLE student_by_id (id int primary key, name text, addressLine1 text, country text);
+      ```
+     - Creating table with composite key
+     ```
+       CREATE TABLE student_by_address (addressLine1 text, id int , name text, country text, primary key(addressLine1,id));
+     ```
+      - below command can be used to describe tables
+      ```
+       describe tables
+      ```
+      ```
+      describe <table name>
       ```
    - dsfdsf
    - sdfjskf
