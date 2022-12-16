@@ -1,6 +1,6 @@
 # Cassandra 
 <details> <summary><b>Cassandra Setup</b></summary>
-  <details><summary><b>Cassandra setup in windows</b></summary>
+  <details><summary><b>Cassandra 3.11 setup in windows as windows is not supporting version 4 for that refer docker setup</b></summary>
   <p>
   
    - Go to cassandra bin directory
@@ -12,8 +12,12 @@
   <details><summary><b>Cassandra setup in windows using docker</b></summary>
   <p>
   
-   - Go to cassandra bin directory
-   - kdsf
+   - Make sure docker desktop is installed in your machine
+   - Open command prompt and run below command
+   ```
+    docker pull cassandra:latest
+   ``` 
+   - Go to docker desktop, you will be able to see doker container running, go to docker terminal form docker desktop and run cqlsh
    - fdsfkdsf
     
     
@@ -21,20 +25,6 @@
     
   </details>
   
-  
-  <details><summary><b>Cassandra setup in linux</b></summary>
-  <p>
-  
-   - Go to cassandra bin directory
-   - kdsf
-   - fdsfkdsf
-  </p>
-  </details>
-
-</details>
-
-
-
 <details> <summary><b>Cassandra Core</b></summary>
 <p>
   Go to cassandra bin drectory and run below command form terminal to start cassandra server</br>
@@ -85,7 +75,17 @@
       ```
       describe <table name>
       ```
-   - dsfdsf
+   - Consistency, insert and selects
+     - Consistency
+       - Quorum = (Partition+1)%2
+       - Run ``` consistency ``` see currrent consistency level
+       - Command ``` consistency <consistency level> ``` will set specified consistency
+       - new jdf
+     - Inserts and Selects
+       - Insert value in 
+       - jkdsf
+       - dksfjf
+     - dsfsd
    - sdfjskf
    - dvj
     
