@@ -31,7 +31,7 @@
       InvalidRequest: Error from server: code=2200 [Invalid query] message="Undefined column name addressline"
       cqlsh:test_keyspace> select * from student_by_address where id=1 and addressline1='GKP';
      ```
-     - if we insert the duplicate record in that case cassandra will update the record.
+     - if we insert the duplicate record in that case cassandra will update the record instead of inserting new one.
    
 </p>
 </details>
