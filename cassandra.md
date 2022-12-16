@@ -70,10 +70,14 @@
       ```
        CREATE TABLE student_by_id (id int primary key, name text, addressLine1 text, country text);
       ```
-     - Creating table with composite key
-     ```
-       CREATE TABLE student_by_address (addressLine1 text, id int , name text, country text, primary key(addressLine1,id));
-     ```
+       - Creating table with composite key(we can specy n number of columns in primary key)
+       ```
+         CREATE TABLE student_by_address (addressLine1 text, id int , name text, country text, primary key(addressLine1,id));
+       ```
+       - create table with clustering key
+       ```
+        CREATE TABLE student_by_addressln1_and_city (addressLine1 text, id int , name text, country text, city text, primary key((addressLine1,city)id));
+       ```
       - below command can be used to describe tables
       ```
        describe tables
