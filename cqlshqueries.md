@@ -94,4 +94,12 @@
        create table fee_by_student_id (id uuid primary key, noOfMFS counter);
        update  fee_by_student_id set noOfMFS = noOfMFS+1 where id= uuid(); -> insert is not allowed for counter column as it can only be incr or decremented
     ```
-
+### CSV import and export
+   - CSV Import rules
+     - Make sure all column which is part of primary key is present in csv file
+     - column which is not present in csv file will be set to null.
+     - following command can be used to import csv file to cassandra database. if data is huge we should prefer batch 
+     ```
+      copy student_by_address(id,addressline1,name,country) from 'C:/Users/rakesh-sin/OneDrive - HCL Technologies Ltd/Desktop/test.csv' WITH DELIMITER = ',' AND            header=true;
+     ```
+   - 
