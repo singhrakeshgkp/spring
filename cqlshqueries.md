@@ -102,4 +102,13 @@
      ```
       copy student_by_address(id,addressline1,name,country) from 'C:/Users/rakesh-sin/OneDrive - HCL Technologies Ltd/Desktop/test.csv' WITH DELIMITER = ',' AND            header=true;
      ```
-   - 
+   - CSV eport
+     - Use following command to copy the data to csv file form table.
+       ```
+       copy student_by_address to  'C:/Users/rakesh-sin/OneDrive - HCL Technologies Ltd/Desktop/test_export.csv' with DELIMITER = ',' ;
+       ```
+     - Below command will copy the specified column only.
+       ```
+       copy student_by_address(country,name) to  'C:/Users/rakesh-sin/OneDrive - HCL Technologies Ltd/Desktop/test_export.csv' with DELIMITER = ','  ;
+       ```
+    
