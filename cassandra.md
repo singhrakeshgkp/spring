@@ -81,4 +81,14 @@
     
 </p>
 </details>
+ 
+ <details><summary><b>Cassandra Advance</b></summary>
+  <p>
   
+   - Peer to Peer Architecture
+     - In peer to peer architecture every nodes in the cluster are considered equal(it does not follow leader and follower approach)
+     - Replica is independent on each other and dont relly on each other. 
+     - Node who receives the request form client called 'co-ordinatior' it is respinsible to sync the darta in in other partition/node.
+  
+  </p>
+  </details> 
