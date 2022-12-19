@@ -111,4 +111,16 @@
        ```
        copy student_by_address(country,name) to  'C:/Users/rakesh-sin/OneDrive - HCL Technologies Ltd/Desktop/test_export.csv' with DELIMITER = ','  ;
        ```
-    
+### Materialized views
+   - Materialized helps solve issue with secondary indexs by creating n-number of preconfigured views, allowing query to be performed on additional columns that
+     were not part of the original primary key.
+   - Parimary key in materialized must included all the column which is part of base table primary key+ additional column  in filter(where clause and primary key        column section)
+     ```
+     create materialized view test_keyspace.student_by_name     **<view Name>**
+                 ... as select * from test_keyspace.student_by_address   **<base table name>**
+                 ... where name is not null and
+                 ... id is not null
+                 ... and addressline1 is not null
+                 ... primary key(name,id,addressline1);
+     ```
+   -  this is not recommended for production, as it reduce the performance(specially when any update happens in base table it sync the data in all the views)
