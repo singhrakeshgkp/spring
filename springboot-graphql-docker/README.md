@@ -18,7 +18,7 @@ What is docker?\
    ``` docker network create springboot-mysql-net ```
   * Run the mysql container in the network. Use below command to run it.
     ```
-    docker run -it --name mysqldb --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=graphqltest -e MYSQL_USER=sysuser -e                     MYSQL_PASSWORD=root -d mysql:5.7
+    docker run -it --name mysqldb --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=graphqltest -e MYSQL_USER=sysuser -e                MYSQL_PASSWORD=root -d mysql:5.7
     ```
   * Now lets verify if mysql is running.
     ``` 
