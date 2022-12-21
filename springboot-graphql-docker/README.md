@@ -14,10 +14,11 @@ What is docker?\
  4. Run docker image using command  ``` docker run -p 8181:8787 springboot-graphql-docker.jar ```
  5. since we have used mysql with our spring boot application so application will not run. First we need to create docker network for mysql database. To create Docker network follow below steps.
   * Run command ``` docker pull mysql:5.7 ```
-  * create docker network for spring boot application to communicate with mysql database. Here is the command to create docker network ``` docker network create               springboot-mysql-net ```
+  * create docker network for spring boot application to communicate with mysql database. Here is the command to create docker network
+   ``` docker network create springboot-mysql-net ```
   * Run the mysql container in the network. Use below command to run it.
     ```
-    docker run -it --name mysqldb --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=graphqltest -e MYSQL_USER=sysuser -e                     MYSQL_PASSWORD=root     -d mysql:5.7
+    docker run -it --name mysqldb --network=springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=graphqltest -e MYSQL_USER=sysuser -e                     MYSQL_PASSWORD=root -d mysql:5.7
     ```
   * Now lets verify if mysql is running.
     ``` 
