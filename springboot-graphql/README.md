@@ -33,15 +33,15 @@ for any other type we use GraphQLResolver
 ### Running GraphQL Mockserver
 
 ### Union and Interface
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/union_interface.md)\
+for more details click [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/union_interface.md)\
 
 ### Fragments
 Fragments are resuable things in GraphQL. We can assume fragments like a function in programming language.
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/fragments.md)\
+for more details click [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/fragments.md)\
 
 ### Mutation
 GraphQL is not just about queries, it also provides a way to manipulate the data. This is where GraphQL mutation comes into picture.
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/mutation.md)\
+for more details click [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/mutation.md)\
 
 ### Subscription
  In case of query we send single request from client and get single response back from server. But in case of subscription its completely different. we send single request but then we get back stream of messages back.
