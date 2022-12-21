@@ -22,7 +22,7 @@ URL- http://localhost:8787/graphql
 http://localhost:8080/graphiql?path=/graphql(if u want to test in browser)
 
 ### Different Type of Queries
-for more details click [here](https://github.com/singhrakeshgkp/GraphQLWithSpringBoot/blob/main/GraphQLQueriesAndResponse.md)\
+for more details click [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/GraphQLQueriesAndResponse.md)\ 
 
 ### Resolvers
 For Query we have GraphQLQueryResolver.</br>
