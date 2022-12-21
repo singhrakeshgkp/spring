@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-cassandra" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-cassandra" target="11" />
+      <module name="springboot-cassandra" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -31,6 +31,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
 	
 	@Override
 	protected String getKeyspaceName() {
+
 		return keySpaceName;
 	}
 	
@@ -38,7 +39,8 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
 	public SchemaAction getSchemaAction() {
 		return SchemaAction.CREATE_IF_NOT_EXISTS;
 	}
-	
+
+
 	@Override
 	protected List<CreateKeyspaceSpecification> getKeyspaceCreations() {
 		CreateKeyspaceSpecification specification = CreateKeyspaceSpecification.createKeyspace(keySpaceName)
