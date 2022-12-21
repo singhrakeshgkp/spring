@@ -2,23 +2,24 @@
 ### How to create fragments?
 Below syntax can be used to create fragments.
 
+```json
 fragment commentFragment(fragment name) on Comment(tye name){
  text
  author
 }
-
+```
 ### How to refer fragments?
 Using ... you can refer fragment.
 
 ### Sample Req
-
+```json
 {
     allParent{
         ... commentFragment
     }
 }
-
-
+```
+```json
 fragment commentFragment on Comment{
  text
  author{
@@ -26,8 +27,9 @@ fragment commentFragment on Comment{
      bio
  }
 }
+```
 ### Sample Response
-
+```json
 {
     "data": {
         "allParent": [
@@ -57,3 +59,5 @@ fragment commentFragment on Comment{
         ]
     }
 }
+
+```
