@@ -1,115 +1,104 @@
+# Union 
+1. create a union in .graphqls file for example **union ProfileAndComment = Profile | Comment** 
+2. create a query in query type profileAndCmmentDetails: [ProfileAndComment]
+3. define method for above union in GraphQLQueryResolver implementation class
 
-# Mutation
-* Define below mutation in your query.
-* Create Mutation controller, create two method for the above mutation and annotatate them with @MutationMapping or @SchemaMapping annotation.
-* Run your application and use below mutation to store data.
+Note __typename keyword is used to identify the data if it belongs to Profile type or Comment type
+### Sample Request
 
-
-
-```json 
-    type Mutation{
-addProfile(userName: String!, bio: String!): Profile!
-addArticle(title: String!, text: String!, author: Profile!, comments: [Comment]):Article!
-
+```json
+{
+    profileAndCmmentDetails{
+        __typename
+        ...on Profile{
+            id
+            id
+        }
+    ...on Comment{
+        id
+    }
+    }
 }
 ```
-
-Request AddProfile Mutation.
+### Sample Response
 ```json
-mutation{
-  addProfile(
-    userName: "rakesh singh",
-    bio: "my first mutation application"
-  ){
+{
+    "data": {
+        "profileAndCmmentDetails": [
+            {
+                "__typename": "Profile",
+                "id": 1
+            },
+            {
+                "__typename": "Profile",
+                "id": 2
+            },
+            {
+                "__typename": "Comment",
+                "id": 1
+            },
+            {
+                "__typename": "Comment",
+                "id": 2
+            },
+            {
+                "__typename": "Comment",
+                "id": 3
+            }
+        ]
+    }
+}
+```
+# Interface
+* Deifne new interface type
+* Add a method in query.
+* Define new interface in java class and also one resolver method 
+
+### Sample Request
+
+```json
+{
+  getAllEntity{
+    __typename
     id
-    userName
+    ... on Profile{
+     
+      userName
+    }
+    ... on Article{
+     
+      text
+    }
   }
 }
 ```
-Response.
+### Sample Response
 
 ```json
 {
   "data": {
-    "addProfile": {
-      "id": 5,
-      "userName": "rakesh singh"
-    }
-  }
-}
-```
-# Different type of mutation queries
-* Implementing mutation with single fields/arguments
-   Request.
-  ```json
-   mutation{
-  addArticle(
-    title:"amazon cloud"
-    text:"today will start amazon cloud session"
-    authorId:1
-  ){
-    id
-    text
-    title
-    author {
-      id
-    }
-  }
-}
-```
-Response.
- ```json
-  {
-  "data": {
-    "addArticle": {
-      "id": 5,
-      "text": "today will start amazon cloud session",
-      "title": "amazon cloud",
-      "author": {
-        "id": 1
+    "getAllEntity": [
+      {
+        "__typename": "Profile",
+        "id": 1,
+        "userName": "g00glen00b"
+      },
+      {
+        "__typename": "Profile",
+        "id": 2,
+        "userName": "admin"
+      },
+      {
+        "__typename": "Article",
+        "id": 1,
+        "text": "This is a hello world"
+      },
+      {
+        "__typename": "Article",
+        "id": 2,
+        "text": "Bar"
       }
-    }
+    ]
   }
 }
- ```
-* Implementing mutation with input type.
-
-  ```json
-  input ArticleInput{
-    id: Int
-    title: String!
-    text: String!
-    authorId: Int
-}
-  ```
-   Request.
-   ```json
-   mutation{
-  addArticleByArticleInput(
-  articleInput: {
-    
-    title:"additing article by input type"
-    text:"article text will goes here"
-   authorId: 2
-  }){
-    id
-    text
-    title
-   
-  }
-}
-  ```
-  Response.
-  ```json
-  {
-  "data": {
-    "addArticleByArticleInput": {
-      "id": 3,
-      "text": "article text will goes here",
-      "title": "additing article by input type"
-    }
-  }
-}
-  ```
-
-
+```
