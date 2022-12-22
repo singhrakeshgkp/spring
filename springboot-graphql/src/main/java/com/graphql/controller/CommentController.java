@@ -2,16 +2,15 @@ package com.graphql.controller;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import com.graphql.entity.Comment;
 import com.graphql.entity.Profile;
 import com.graphql.repository.ProfileRepository;
+
+import jakarta.transaction.Transactional;
 
 @Controller
 @Transactional

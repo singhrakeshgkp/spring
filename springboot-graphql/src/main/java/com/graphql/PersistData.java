@@ -1,6 +1,6 @@
 package com.graphql;
 
-import javax.transaction.Transactional;
+
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,6 +12,7 @@ import com.graphql.repository.ArticleRepository;
 import com.graphql.repository.CommentRepository;
 import com.graphql.repository.ProfileRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 @Component
