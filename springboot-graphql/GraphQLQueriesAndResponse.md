@@ -1,83 +1,162 @@
-# Union 
-1. create a union in .graphqls file for example **union ProfileAndComment = Profile | Comment** 
-2. create a query in query type profileAndCmmentDetails: [ProfileAndComment]
-3. define method for above union in GraphQLQueryResolver implementation class
-
-Note __typename keyword is used to identify the data if it belongs to Profile type or Comment type
-### Sample Request
-
+1. With Argument
+This will return Article by id .
+Request
 ```json
-{
-    profileAndCmmentDetails{
-        __typename
-        ...on Profile{
-            id
-            id
-        }
-    ...on Comment{
+ {
+
+    article(id: 1){
         id
-    }
+        title
+        author{
+            id
+            userName
+        }
     }
 }
 ```
-### Sample Response
+
+Response.
 ```json
 {
     "data": {
-        "profileAndCmmentDetails": [
-            {
-                "__typename": "Profile",
-                "id": 1
-            },
-            {
-                "__typename": "Profile",
-                "id": 2
-            },
-            {
-                "__typename": "Comment",
-                "id": 1
-            },
-            {
-                "__typename": "Comment",
-                "id": 2
-            },
-            {
-                "__typename": "Comment",
-                "id": 3
+        "article": {
+            "id": 1,
+            "title": "Hello wold",
+            "author": {
+                "id": 1,
+                "userName": "g00glen00b"
             }
-        ]
+        }
+    }
+}
+
+```
+2. With Argument and Alias.
+
+here writer and writerName are alias. actually here we are calling  author as writer and username as writerName and same way we are getting the field in the responase.
+so whatever you want to call a field u can specify in the query and same way u will get the response.
+Request.
+```jason
+{
+    article(id: 1){
+        id
+        title
+        writer:author{
+            id
+            writerName:userName
+        }
     }
 }
 ```
-# Interface
-* Deifne new interface type
-* Add a method in query.
-* Define new interface in java class and also one resolver method 
 
-### Sample Request
-
+Response.
 ```json
 {
-  getAllEntity{
+    "data": {
+        "article": {
+            "id": 1,
+            "title": "Hello wold",
+            "writer": {
+                "id": 1,
+                "writerName": "g00glen00b"
+            }
+        }
+    }
+}
+```
+3.@include keyword in the query
+one can include or exclude the field using @include keyword in the query.in below case writer will be excluded from response
+Request.
+```json
+{
+    article(id: 1){
+        id
+        title
+        writer:author @include(if:false){
+            id
+            writerName:userName
+        }
+    }
+}
+```
+Response.
+```json
+{
+    "data": {
+        "article": {
+            "id": 1,
+            "title": "Hello wold"
+        }
+    }
+}
+```
+4. @include keyworkd can be used with Variable as weill. see the below query with variable
+Variable .
+```json
+{
+"withWriter":true
+}
+```
+Request.
+```json
+query testFun($withWriter: Boolean!){
+    article(id: 1){
+        id
+        title
+        writer:author @include(if:$withWriter){
+            id
+            writerName:userName
+        }
+    }
+}
+```
+Response.
+```json
+{
+    "data": {
+        "article": {
+            "id": 1,
+            "title": "Hello wold",
+            "writer": {
+                "id": 1,
+                "writerName": "g00glen00b"
+            }
+        }
+    }
+}
+```
+5.Union Command(returns combination of multiple types) - define below type in your graphql.
+
+Define below in your graphqls file.
+```json
+union AllArtileAndProfile = Article | Profile
+```
+```json
+allArticleAndProfile :[AllArtileAndProfile]
+```
+Request.
+```json
+{
+ 
+  allArticleAndProfile{
     __typename
-    id
     ... on Profile{
-     
+      id
       userName
     }
     ... on Article{
-     
-      text
+      id
     }
+    
   }
 }
 ```
-### Sample Response
-
+Response.
 ```json
 {
   "data": {
-    "getAllEntity": [
+    "__typename": "Query",
+    "allArticleAndProfile": [
       {
         "__typename": "Profile",
         "id": 1,
@@ -90,15 +169,15 @@ Note __typename keyword is used to identify the data if it belongs to Profile ty
       },
       {
         "__typename": "Article",
-        "id": 1,
-        "text": "This is a hello world"
+        "id": 1
       },
       {
         "__typename": "Article",
-        "id": 2,
-        "text": "Bar"
+        "id": 2
       }
     ]
   }
 }
 ```
+
+
