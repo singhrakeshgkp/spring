@@ -5,6 +5,8 @@
 
 Note __typename keyword is used to identify the data if it belongs to Profile type or Comment type
 ### Sample Request
+
+```json
 {
     profileAndCmmentDetails{
         __typename
@@ -17,8 +19,9 @@ Note __typename keyword is used to identify the data if it belongs to Profile ty
     }
     }
 }
+```
 ### Sample Response
-
+```json
 {
     "data": {
         "profileAndCmmentDetails": [
@@ -45,54 +48,57 @@ Note __typename keyword is used to identify the data if it belongs to Profile ty
         ]
     }
 }
+```
 # Interface
+* Deifne new interface type
+* Add a method in query.
+* Define new interface in java class and also one resolver method 
 
 ### Sample Request
 
+```json
 {
-    allParent{
-        __typename
-        id
-        ...on Profile{
-        userName
-        }
-    ...on Comment{
+  getAllEntity{
+    __typename
+    id
+    ... on Profile{
+     
+      userName
+    }
+    ... on Article{
+     
       text
     }
-    }
+  }
 }
-
+```
 ### Sample Response
 
+```json
 {
-    "data": {
-        "allParent": [
-            {
-                "__typename": "Profile",
-                "id": 1,
-                "userName": "g00glen00b"
-            },
-            {
-                "__typename": "Profile",
-                "id": 2,
-                "userName": "admin"
-            },
-            {
-                "__typename": "Comment",
-                "id": 1,
-                "text": "Do you like this article?"
-            },
-            {
-                "__typename": "Comment",
-                "id": 2,
-                "text": "This is a great article"
-            },
-            {
-                "__typename": "Comment",
-                "id": 3,
-                "text": "This is a comment"
-            }
-        ]
-    }
+  "data": {
+    "getAllEntity": [
+      {
+        "__typename": "Profile",
+        "id": 1,
+        "userName": "g00glen00b"
+      },
+      {
+        "__typename": "Profile",
+        "id": 2,
+        "userName": "admin"
+      },
+      {
+        "__typename": "Article",
+        "id": 1,
+        "text": "This is a hello world"
+      },
+      {
+        "__typename": "Article",
+        "id": 2,
+        "text": "Bar"
+      }
+    ]
+  }
 }
-
+```
