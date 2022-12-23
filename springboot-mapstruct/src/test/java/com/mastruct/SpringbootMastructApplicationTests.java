@@ -1,10 +1,10 @@
-package com.mastruct;
+package com.MapStruct;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootMastructApplicationTests {
+class SpringbootMapStructApplicationTests {
 
 	@Test
 	void contextLoads() {
