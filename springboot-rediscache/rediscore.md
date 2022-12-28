@@ -2,6 +2,9 @@
  
  - Redis stores the data in key value format
  - connect to redis CLI 
+ ### Redis Command 
+  https://redis.io/commands/
+ 
  ### Perform set, get, and delete operation using CLI
 -  ``` set name<key> rakesh<value> ``` -> set the key value pair
 -  ``` set name<key> rakesh<value> keepttl ``` -> while updating the value if we do not provide keepttl keyword it will set the ttl to nill to preserve the ttl               value use keepttl keyword
@@ -16,3 +19,12 @@
 - ``` ttl employee:1:name<key name> ``` -> to check the time to leave (remaining expirty time)
 - ```  expire employee:1:name<key name> 60<time in sec> ``` -> extends the expiry time
 
+### xx(if present) nx(if not present)
+ - ```  set name rakesh xx  ``` -> update the name key if its present else do nothing 
+ - ``` set name rakesh nx ```   -> set name key if its not exist
+### exist, incr, decr and incr/decrbyfloat command
+ - ```  exists rakesh<key name> ``` -> check if key is exists
+ -  ``` incr count<key name> ``` -> if key exist add one to it if not will create new key with value 0 and add one to it
+ -  ``` decr count<key name> ``` -> reduce the value by 1 (if key not exist it will create new key with value 0 and reduce it by 1)
+ -  ``` incrbyfloat count<key name> ``` -> use to increment float value
+ -  
