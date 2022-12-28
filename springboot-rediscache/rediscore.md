@@ -1,4 +1,4 @@
-
+# Redis Core
  
  - Redis stores the data in key value format
  - connect to redis CLI 
