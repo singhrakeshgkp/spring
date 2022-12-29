@@ -10,4 +10,9 @@
 </p>
 </details>
 
+### Configure Spring Boot Proj
+ - create new spring boot application
+ - add ``` @EnableCaching ``` annotation on main application.java class
+ - Configure Redis factory and redis template
+
 
