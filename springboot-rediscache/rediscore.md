@@ -1,5 +1,5 @@
 # Redis Core
- 
+ - Redis stands for Remote dictionary server.
  - Redis stores the data in key value format
  - connect to redis CLI 
  ### Redis Command 
