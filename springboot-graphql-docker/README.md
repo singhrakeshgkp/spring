@@ -37,4 +37,4 @@ What is docker?\
  8. Test the application. URL http://localhost:8181/graphiql?path=/graphql#
  
  ### Running spring boot + mysql application using docker compose
- (for more details click  [here](https://github.com/singhrakeshgkp/spring/edit/master/springboot-graphql-docker/docker-core.md))\
+ (for more details click  [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql-docker/docker-core.md))\
