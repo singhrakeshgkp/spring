@@ -37,18 +37,13 @@ What is docker?\
  
  
  # Docker file description
-   - FROM openjdk:11    -> base image which will contain jdk and OS
-   - vfdsf
-   - dsfsd
-  
-``` 
-
-# Port exposed to outside container
-EXPOSE 8181
-ADD target/springboot-graphql-docker.jar springboot-graphql-docker.jar
-ENTRYPOINT ["java","-jar","/springboot-graphql-docker.jar"]
-```
-    
-    
-  
+   - FROM openjdk:11    
+     - base image which will contain jdk and OS
+   - EXPOSE 8181
+     - Port exposed to outside container
      
+   - ADD target/*.jar app.jar
+     - will take jar file from given path and add that to docker image and file name will be app.jar
+  - ENTRYPOINT ["java","-jar","/app.jar"]
+    - Entry point for the application   
+  
