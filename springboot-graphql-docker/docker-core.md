@@ -63,7 +63,7 @@
    -  ``` ports: 8080:8080 ``` ->Internal and external port number
    -  ```  build: . ``` -> build using docker file availabel in current directory
    - ``` container-name: springboot-test ```-> it will give the specified container name. if this prop not present in dockercompose random name will be assigned
-   - 
+   - ``` restart: always ``` it will try to restart the application unitl it connect to other services on whihc it has dependency such as myslqdb etc.
    
 </p>
 </details>
@@ -80,8 +80,65 @@
    -  ``` docker-compose up --build ``` -> it will first build and then run the application
    -  ``` docker-compose down  ``` -> will stop and remove container, network etc.
    - ``` docker-compose up --scale springboot-test<container name> = 5  ``` -> will create 5 container before this neeed to perform below steps
+     - same command can be used to scale down as well by reducing the number in command. ie. 5 then give 3 in that case it will remove rest 2 container.
      - remove container-name prop from docker compose file as here we are creating multiple instance so name should be different of each container
      - ``` 7000-7100:8181 ``` specify the port range as each container should be running on different port
+  - 
+   
+</p>
+</details>
+
+   
+   <details>
+<summary><b>Docker, Docker compose and application.properties files</b></summary>
+<p>
+
+   - Docker file
+   
+     ```
+      FROM openjdk:17-alpine
+      ADD target/springboot-testcontainer.jar springboot-testcontainer.jar
+      EXPOSE 8888
+      ENTRYPOINT ["java", "-jar", "springboot-testcontainer.jar"]
+     ```
+   - Docker compose file
+     ```yml
+   
+       version: '20'
+            services: 
+              springboot-testcontainer:
+                image: springboot-testcontainer
+                restart: always
+                build: . # use command docker compose up --build to build the image
+                         #(build: . means it will use docker file available in current dir)
+                ports:
+                  - 8888:8888
+              db:
+               #container-name: mydbcontainer
+               image: mysql
+             #  volumes:
+               # - C:\Users\rakesh-sin\OneDrive - HCL Technologies Ltd\Desktop\mysqldbfiles:\var\lib\mysql
+               ports:
+                - 3308:3306
+               environment:
+                host-name: mysql
+                mysql-port: 3308
+                db_name: testcontainerdb
+                db_root_pwd: tooroot
+   
+   
+     ```
+     
+   - Application.properties file
+   
+     ```
+         server.port=8888
+         spring.datasource.url=jdbc:mysql://${host-name:localhost}:${mysql-port:3306}/${db_name}
+         spring.datasource.username=root
+         spring.datasource.password=${db_root_pwd:tooroott}
+         spring.sql.init.mode=always
+
+     ```
    
 </p>
 </details>
