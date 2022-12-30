@@ -1,4 +1,7 @@
-#### Docker file description
+#### Docker and Docker compose
+<details>
+<summary>Docker file details<summary>
+<p>
    - FROM openjdk:11    
      - base image which will contain jdk and OS
    - EXPOSE 8181
@@ -8,5 +11,6 @@
      - will take jar file from given path and add that to docker image and file name will be app.jar
   - ENTRYPOINT ["java","-jar","/app.jar"]
     - Entry point for the application   
-   
+</p>
+</details>   
 ### Docker compose file description
