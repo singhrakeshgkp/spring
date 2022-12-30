@@ -2,6 +2,7 @@
 <details>
 <summary>Docker file details</summary>
 <p>
+   
    - FROM openjdk:11    
      - base image which will contain jdk and OS
    - EXPOSE 8181
@@ -12,5 +13,6 @@
   - ENTRYPOINT ["java","-jar","/app.jar"]
     - Entry point for the application   
 </p>
-</details>   
+</details>
+
 ### Docker compose file description
