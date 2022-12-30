@@ -54,11 +54,34 @@
 
 
 <details>
-<summary>Docker compose file description</summary>
+<summary><b>Docker compose file description</b></summary>
 <p>
 
-   - fsdf
-   - sdfs
+   -  ``` version ``` -> docker compose file version
+   -  ```  services ``` -> we can specify n number of services. service name could be anything
+   -  ``` image ``` -> image name that will be used to create docker container
+   -  ``` ports: 8080:8080 ``` ->Internal and external port number
+   -  ```  ```
    - fsdfsd
    
 </p>
+</details>
+   
+   
+<details>
+<summary><b>Docker compose command</b></summary>
+<p>
+
+   -  ``` docker-compose up ``` -> it will perform following task.
+     - check if image is available in the local registry
+     - if image is not available in local registry, it will try to pull from remote registry.
+     - if its not available in remote then it will throw error.
+   -  ```  services ``` -> we can specify n number of services. service name could be anything
+   -  ``` image ``` -> image name that will be used to create docker container
+   -  ``` ports: 8080:8080 ``` ->Internal and external port number
+   -  ```  ```
+   - fsdfsd
+   
+</p>
+</details>
+
