@@ -34,6 +34,20 @@ What is docker?\
     
     ```
  8. Test the application. URL http://localhost:8181/graphiql?path=/graphql#
+ 
+ 
+ # Docker file description
+   - FROM openjdk:11    -> base image which will contain jdk and OS
+   - vfdsf
+   - dsfsd
+  
+``` 
+
+# Port exposed to outside container
+EXPOSE 8181
+ADD target/springboot-graphql-docker.jar springboot-graphql-docker.jar
+ENTRYPOINT ["java","-jar","/springboot-graphql-docker.jar"]
+```
     
     
   
