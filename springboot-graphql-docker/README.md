@@ -2,18 +2,6 @@
 What is docker?\
 (for more details click  [here](https://docs.docker.com/get-started/overview/))\
 
-#### Docker file description
-   - FROM openjdk:11    
-     - base image which will contain jdk and OS
-   - EXPOSE 8181
-     - Port exposed to outside container
-     
-   - ADD target/*.jar app.jar
-     - will take jar file from given path and add that to docker image and file name will be app.jar
-  - ENTRYPOINT ["java","-jar","/app.jar"]
-    - Entry point for the application   
-  
-
 ### Setup Frist Spring Boot Docker Project
 1. Create Spring boot application.
 2. Add Dockerfile in the root directory. Specify the required properties in docker file(for more details about dockerfile click  [here](https://docs.docker.com/engine/reference/builder/
@@ -48,4 +36,5 @@ What is docker?\
     ```
  8. Test the application. URL http://localhost:8181/graphiql?path=/graphql#
  
- 
+ ### Running spring boot + mysql application using docker compose
+ (for more details click  [here](https://github.com/singhrakeshgkp/spring/edit/master/springboot-graphql-docker/docker-core.md))\
