@@ -10,13 +10,7 @@
      - if we restart or remove docker or docker container, data will be lost(fiel/folder will be deleted).
      - To avoid this we should map data directory to host machine ``` home/mysql/data ...etc ```
      - command to map volume ``` docker run -d -p 3307:3306 --net test-net --name mysqldb --env-file envfilename -v "c:/abc":var/lib/mysql mysql mysqldb  ```
-   - EXPOSE 8181
-     - Port exposed to outside container
-     
-   - ADD target/*.jar app.jar
-     - will take jar file from given path and add that to docker image and file name will be app.jar
-  - ENTRYPOINT ["java","-jar","/app.jar"]
-    - Entry point for the application   
+   
 </p>
 </details>
 <details>
