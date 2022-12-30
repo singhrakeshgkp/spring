@@ -72,7 +72,7 @@
 <summary><b>Docker compose command</b></summary>
 <p>
 
-   -  ``` docker-compose up ``` -> it will perform following task.
+   - ``` docker-compose up ``` -> it will perform following task.
      - check if image is available in the local registry
      - if image is not available in local registry, it will try to pull from remote registry.
      - if its not available in remote then it will throw error.
