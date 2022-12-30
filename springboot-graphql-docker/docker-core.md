@@ -90,7 +90,7 @@
 
    
    <details>
-<summary><b>Docker, Docker compose and application.properties files</b></summary>
+<summary><b>Docker, Docker compose and application.properties sample files</b></summary>
 <p>
 
    - Docker file
