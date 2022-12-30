@@ -14,7 +14,7 @@
 </p>
 </details>
 <details>
-<summary><b>Docker file details</b></summary>
+<summary><b>Docker file description</b></summary>
 <p>
    
    - FROM openjdk:11    
