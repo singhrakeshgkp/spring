@@ -30,6 +30,8 @@
    - ```
      docker run -p 9090:9090 --name app<image name> --net test-net<network name> -e MYSQL_HOST=mysqldb -e MYSQL_USER=root -e MYSQL_PASSWORD=tooroot -e MYSQL_PORT=3306 app<application image name i.e spring boot>
      ```
+   - we can also refer env varriable details fom a file using command ``` docker run -p 9090:9090 --name app --net test-net --env-file env<file name> app ```
+   - 
 </p>
 </details>
 
