@@ -1,6 +1,6 @@
 #### Docker and Docker compose
 <details>
-<summary>Docker file details<summary>
+<summary>Docker file details</summary>
 <p>
    - FROM openjdk:11    
      - base image which will contain jdk and OS
