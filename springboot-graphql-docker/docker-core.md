@@ -61,8 +61,9 @@
    -  ```  services ``` -> we can specify n number of services. service name could be anything
    -  ``` image ``` -> image name that will be used to create docker container
    -  ``` ports: 8080:8080 ``` ->Internal and external port number
-   -  ```  ```
-   - fsdfsd
+   -  ```  build: . ``` -> build using docker file availabel in current directory
+   - ``` container-name: springboot-test ```-> it will give the specified container name. if this prop not present in dockercompose random name will be assigned
+   - 
    
 </p>
 </details>
@@ -73,14 +74,14 @@
 <p>
 
    - ``` docker-compose up ``` -> it will perform following task.
-     - check if image is available in the local registry
-     - if image is not available in local registry, it will try to pull from remote registry.
+     - check if image is available in the local registry.
+     - if image is not available in local registry, it will try to pull from remote.
      - if its not available in remote then it will throw error.
-   -  ```  services ``` -> we can specify n number of services. service name could be anything
-   -  ``` image ``` -> image name that will be used to create docker container
-   -  ``` ports: 8080:8080 ``` ->Internal and external port number
-   -  ```  ```
-   - fsdfsd
+   -  ``` docker-compose up --build ``` -> it will first build and then run the application
+   -  ``` docker-compose down  ``` -> will stop and remove container, network etc.
+   - ``` docker-compose up --scale springboot-test<container name> = 5  ``` -> will create 5 container before this neeed to perform below steps
+     - remove container-name prop from docker compose file as here we are creating multiple instance so name should be different of each container
+     - ``` 7000-7100:8181 ``` specify the port range as each container should be running on different port
    
 </p>
 </details>
