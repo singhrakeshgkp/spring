@@ -104,42 +104,55 @@
    - Docker compose file
      ```yml
    
-       version: '20'
-            services: 
-              springboot-testcontainer:
-                image: springboot-testcontainer
-                restart: always
-                build: . # use command docker compose up --build to build the image
-                         #(build: . means it will use docker file available in current dir)
-                ports:
-                  - 8888:8888
-              db:
-               #container-name: mydbcontainer
-               image: mysql
-             #  volumes:
-               # - C:\Users\rakesh-sin\OneDrive - HCL Technologies Ltd\Desktop\mysqldbfiles:\var\lib\mysql
-               ports:
-                - 3308:3306
-               environment:
-                host-name: mysql
-                mysql-port: 3308
-                db_name: testcontainerdb
-                db_root_pwd: tooroot
-   
-   
+                version: '3'
+         services: 
+           springboot-testcontainer:
+             image: springboot-testcontainer
+            # env_file: ./environment.env
+             environment: 
+              - MYSQL_PASSWORD=tooroot
+              - MYSQL_ROOT_PASSWORD=tooroot
+              - MYSQL_DATABASE=testcontainerdb
+              - MYSQLDB_LOCAL_PORT=3306
+              - MYSQLDB_DOCKER_PORT=3306
+              - SPRING_LOCAL_PORT=8888
+              - SPRING_DOCKER_PORT=8888
+              - DB_HOST_NAME= mysqldb
+             depends_on:
+               - mysqldb
+             restart: always
+             build: . # use command docker compose up --build to build the image
+                      #(build: . means it will use docker file available in current dir)
+             ports:
+               - 8888:8888
+           mysqldb:
+            #container-name: mydbcontainer
+            image: mysql
+            #env_file: ./environment.env
+            volumes:
+              - ./dbvolume:/var/lib/mysql
+            ports:
+             - 3306:3306
+            environment:
+              - MYSQL_PASSWORD=pass
+              - MYSQL_ROOT_PASSWORD=tooroot
+              - MYSQL_DATABASE=testcontainerdb
+              - MYSQLDB_LOCAL_PORT=3306
+              - MYSQLDB_DOCKER_PORT=3306
+              - SPRING_LOCAL_PORT=8888
+              - SPRING_DOCKER_PORT=8888
+              - DB_HOST_NAME= mysqldb
      ```
-     
    - Application.properties file
-   
+    
      ```
-         server.port=8888
-         spring.datasource.url=jdbc:mysql://${host-name:localhost}:${mysql-port:3306}/${db_name}
-         spring.datasource.username=root
-         spring.datasource.password=${db_root_pwd:tooroott}
-         spring.sql.init.mode=always
+      server.port=8888
+      spring.datasource.url=jdbc:mysql://${DB_HOST_NAME:localhost}:${$MYSQLDB_DOCKER_PORT:3306}/${MYSQL_DATABASE:test}
+      spring.datasource.username=root
+      spring.datasource.password=${MYSQL_ROOT_PASSWORD:tooroott}
+      spring.sql.init.mode=always
 
      ```
-   
 </p>
 </details>
 
