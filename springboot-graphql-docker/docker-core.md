@@ -83,7 +83,8 @@
      - same command can be used to scale down as well by reducing the number in command. ie. 5 then give 3 in that case it will remove rest 2 container.
      - remove container-name prop from docker compose file as here we are creating multiple instance so name should be different of each container
      - ``` 7000-7100:8181 ``` specify the port range as each container should be running on different port
-  - 
+   -  ```  docker image prune -a ``` -> Remove all images without at least one container associated to them
+   -  ```  docker system prune -a ``` -> Remove many more things
    
 </p>
 </details>
