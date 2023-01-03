@@ -40,8 +40,8 @@
    - ``` docker ps ``` -> shows list of running container
    - ``` docker network connect test-network<network name> mysqldb<image name> ``` -> connect the application with the given network
    - ``` docker container inspect mysqldb<image name> ``` -> show the image details
-   - ``` docker rm app<image name> ``` -> to remove image
-   - ``` docker rm mysql<image name> -f  ``` -> remove the container forcefully
+   - ``` docker rmi app<image name> ``` -> to remove image
+   - ``` docker rmi mysql<image name> -f  ``` -> remove the container forcefully
    - ``` docker log app<docker image name> ``` -> show the logs
    - ``` docker restart app<image name>  ``` -> will restart the container
    
