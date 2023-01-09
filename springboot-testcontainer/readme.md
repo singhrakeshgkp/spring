@@ -14,7 +14,7 @@
 
 ### LogBack Integration with SpringBoot
  - Create ``` logback-spring.xml ``` file in your spring boot application class path.
- - Do the required changes in the ``` logback-spring.xml  ``` configuration file
+ - Do the required changes in the ``` logback-spring.xml  ``` configuration file for example i have modified file name to ``` sbwtc.log ```
  -  ```
          <?xml version="1.0" encoding="UTF-8"?>
     <configuration>
@@ -64,4 +64,7 @@
 
     </configuration> 
     ```
- - dsfdsf
+ - Follow below steps to log the entry exit using custome annotation
+   - dsfdsf
+   - dsfdsf
+   - dsfdf
