@@ -65,6 +65,13 @@
     </configuration> 
     ```
  - Follow below steps to log the entry exit using custome annotation
-   - dsfdsf
-   - dsfdsf
-   - dsfdf
+   - Create a custom annotation named ``` LogEntryExit  ```
+   - Add following dependency in pom.xml file
+     ```
+     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+		  </dependency>
+     ```
+   - Define an aspect with an advice ``` LogEntryExitAspect ```
+
