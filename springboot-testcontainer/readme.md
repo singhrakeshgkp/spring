@@ -74,8 +74,8 @@
      </dependency>
      ```
    - Define an aspect with an advice ``` LogEntryExitAspect ```
- - Setting up unique id per request
-   - dkfdjk
+ - Setting up unique id per request using MDC(Mapped Diagnostic Context)
+   - Create a class ``` SLF4JMDCFilterConfig.java ```
    - kdfjs
    - kdf
  - 
