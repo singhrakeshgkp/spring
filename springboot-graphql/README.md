@@ -1,6 +1,8 @@
 # GraphQLWithSpringBoot
-To Deploy the application using docker please navigate to this [link](/spring/blob/master/docker_readme.md)
-GraphQL is an specification or query language for api
+GraphQL is an specification or query language for an api <br/>
+
+To see how to create docker image and deploy the docker image navigate to this [link](/spring/blob/master/docker_readme.md)
+
 ### GraphQL Consist three main parts
  * Guery
  * Mutation
