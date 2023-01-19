@@ -10,10 +10,24 @@ To see how to create docker image and deploy the docker image navigate to this [
 
 ### Building your first GraphQL Application.
 1. Create a spring boot program and Add following dependencies in pom.xml file\
-  a. graphql-java-tools (for more details click  [here](https://github.com/graphql-java-kickstart/graphql-java-tools/blob/master/README.md))\
-  b.  graphql-spring-boot-starter (for more details click [here](https://github.com/graphql-java-kickstart/graphql-spring-boot)\
-  apart from above dependencies we need to add lombok spring data jpa and sql connector dependencies if we want to communicate with database
-2. Add following properties in application.yml file\
+  ```
+    <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-graphql</artifactId>
+    </dependency>
+    
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+    
+    <dependency>
+			<groupId>org.springframework.graphql</groupId>
+			<artifactId>spring-graphql-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+  ```
+2. Add following properties in application.yml file <br/>
  ``` server:
   http2:
     enabled: true
@@ -23,11 +37,11 @@ To see how to create docker image and deploy the docker image navigate to this [
 3. Create GraphQL Schema.
 4. Create GraphQL Resolvers
 5. Run and test your application from postman
-URL- http://localhost:8787/graphql
-http://localhost:8080/graphiql?path=/graphql(if u want to test in browser)
+URL- ``` http://localhost:8787/graphql  ``` (can be used in postman for testing)<br/>
+``` http://localhost:8080/graphiql?path=/graphql ```(can be used for testing from browser)<br/>
 
 ### Different Type of Queries
-for more details click [here](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/GraphQLQueriesAndResponse.md)\ 
+for more details click [here](springboot-graphql/GraphQLQueriesAndResponse.md)<br/>
 
 ### Resolvers
 For Query we have GraphQLQueryResolver.</br>
