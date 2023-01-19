@@ -14,10 +14,12 @@ To see how to create docker image and deploy the docker image navigate to this [
   b.  graphql-spring-boot-starter (for more details click [here](https://github.com/graphql-java-kickstart/graphql-spring-boot)\
   apart from above dependencies we need to add lombok spring data jpa and sql connector dependencies if we want to communicate with database
 2. Add following properties in application.yml file\
-  server:
+ ``` server:
   http2:
     enabled: true
   port: 8787
+  
+```
 3. Create GraphQL Schema.
 4. Create GraphQL Resolvers
 5. Run and test your application from postman
