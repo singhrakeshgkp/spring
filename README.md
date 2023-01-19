@@ -7,8 +7,9 @@
    - Docker + Docker Compose
  * Spring Boot with GraphQL
   - Spring Boot + GraphQL
- * Spring Boot Graphql with Docker
-  - Docker+ Docker Compose details including core, command etc..
+  - Unit + Integration Test
+  - Running application on Docker using Docker
+  - Running application on Docker using docker Compose
  * Spring Boot + Cassandra
  * Spring Boot map struct
  * Spring data redis
