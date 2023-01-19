@@ -9,36 +9,37 @@ To see how to create docker image and deploy the docker image navigate to this [
  * Subscription
 
 ### Building your first GraphQL Application.
-1. Create a spring boot program and Add following dependencies in pom.xml file\
+  - Create a spring boot application and Add following dependencies in pom.xml file\
   ```
-    <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-graphql</artifactId>
-    </dependency>
-    
-    <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-    
-    <dependency>
-			<groupId>org.springframework.graphql</groupId>
-			<artifactId>spring-graphql-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+	    <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-graphql</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework.graphql</groupId>
+		<artifactId>spring-graphql-test</artifactId>
+		<scope>test</scope>
+	</dependency>
   ```
-2. Add following properties in application.yml file <br/>
- ``` server:
-  http2:
-    enabled: true
-  port: 8787
-  
-```
-3. Create GraphQL Schema.
-4. Create GraphQL Resolvers
-5. Run and test your application from postman
-URL- ``` http://localhost:8787/graphql  ``` (can be used in postman for testing)<br/>
-``` http://localhost:8080/graphiql?path=/graphql ```(can be used for testing from browser)<br/>
+  - apart from the above dependency u can add other dependency as per your need such as mysql connector, spring data jpa, lombok etc..
+  - Add following properties in application.yml file <br/>
+   ``` server:
+   http2:
+     enabled: true
+   port: 8787
+
+  ```
+ - Create GraphQL Schema.
+ - Create GraphQL Resolvers
+ - Run and test your application from postman
+	URL- ``` http://localhost:8787/graphql  ``` (can be used in postman for testing)<br/>
+	``` http://localhost:8080/graphiql?path=/graphql ```(can be used for testing from browser)<br/>
 
 ### Different Type of Queries
 for more details click [here](springboot-graphql/GraphQLQueriesAndResponse.md)<br/>
