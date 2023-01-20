@@ -42,7 +42,7 @@ To see how to create docker image and deploy the docker image navigate to this [
 	``` http://localhost:8080/graphiql?path=/graphql ```(can be used for testing from browser)<br/>
 
 ### Different Type of Queries
-for more details click [here](/springboot-graphql/GraphQLQueriesAndResponse.md.md)<br/>
+for more details click [here](/springboot-graphql/GraphQLQueriesAndResponse.md)<br/>
 
 ### Resolvers
 For Query we have GraphQLQueryResolver.</br>
