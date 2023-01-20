@@ -1,6 +1,6 @@
 # Spring Boot with Docker
 What is docker?\
-please refer given [link](/springboot-graphql/dockerdoc.md) <br/>
+please refer given [link](/springboot-graphql/dockerdoc.md) for docker and docker compose command <br/>
 (for more details do to official website click  [here](https://docs.docker.com/get-started/overview/))\
 
 
@@ -39,4 +39,8 @@ please refer given [link](/springboot-graphql/dockerdoc.md) <br/>
  8. Test the application. URL http://localhost:8181/graphiql?path=/graphql#
  
  ### Running spring boot + mysql application using docker compose
- (for more details click  [here]()
+   - Create DockerCompose.yml file
+   - define the required properties
+   - go to docker compose file location and open command prompt
+   - create .env file in the project root directory(where docker compose file is present) and define all the variable and its values.
+   - run command ``` docker compose up --build  ``` command
