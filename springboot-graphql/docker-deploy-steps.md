@@ -44,3 +44,6 @@ please refer given [link](/springboot-graphql/dockerdoc.md) for docker and docke
    - go to docker compose file location and open command prompt
    - create .env file in the project root directory(where docker compose file is present) and define all the variable and its values.
    - run command ``` docker compose up --build  ``` command
+   - Follow below steps connect to running mysql on docker.
+      - run  command ``` docker exec -it springboot-graphql-mysqldb-1 bash<container name can be obtaine using docker compose ps command> ```
+      - ``` mysql -uroot -p ``` press enter and finally provide the password.
