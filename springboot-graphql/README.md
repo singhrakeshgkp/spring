@@ -9,7 +9,7 @@ To see how to create docker image and deploy the docker image navigate to this [
  * Subscription
 
 ### Building your first GraphQL Application.
-  - Create a spring boot application and Add following dependencies in pom.xml file\
+  - Create a spring boot application and Add following dependencies in pom.xml file <br/>
   ```
 	    <dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -53,15 +53,15 @@ for any other type we use GraphQLResolver
 ### Running GraphQL Mockserver
 
 ### Union and Interface
-for more details click [here](/springboot-graphql/union_interface.md)\
+for more details click [here](/springboot-graphql/union_interface.md)
 
 ### Fragments
 Fragments are resuable things in GraphQL. We can assume fragments like a function in programming language.
-for more details click [here](/springboot-graphql/fragments.md)\
+for more details click [here](/springboot-graphql/fragments.md)
 
 ### Mutation
 GraphQL is not just about queries, it also provides a way to manipulate the data. This is where GraphQL mutation comes into picture.
-for more details click [here](/springboot-graphql/mutation.md)\
+for more details click [here](/springboot-graphql/mutation.md)
 
 ### Subscription
  In case of query we send single request from client and get single response back from server. But in case of subscription its completely different. we send single request but then we get back stream of messages back.
