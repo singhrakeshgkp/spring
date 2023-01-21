@@ -121,7 +121,7 @@ Response.
  
 ```
 
-* Mutation query with input as variable in request.
+* Mutation query with input as variable in request.<br/>
 Request.
 
 ```json
