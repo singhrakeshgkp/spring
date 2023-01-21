@@ -121,3 +121,47 @@ Response.
  
 ```
 
+* Mutation query with input as variable
+Request.
+
+```json
+mutation
+  addArtucleToCard($input:ArticleInput){
+  addArticleByArticleInput(articleInput: $input){
+    id
+    text
+    title
+   
+  }
+}
+
+
+```
+Variables.
+
+```json
+
+{ 
+   "input":{
+     "title":"additing article by input type",
+     "text":"article text will goes here",
+    "authorId": 3
+  }
+}
+
+```
+Response.
+
+```json
+
+{
+  "data": {
+    "addArticleByArticleInput": {
+      "id": 8,
+      "text": "article text will goes here",
+      "title": "additing article by input type"
+    }
+  }
+}
+
+```
