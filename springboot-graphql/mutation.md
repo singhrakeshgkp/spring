@@ -78,16 +78,18 @@ Response.
  
 * Implementing mutation with input type.
 
-  ```json
+```json
   input ArticleInput{
     id: Int
     title: String!
     text: String!
     authorId: Int
 }
-  ```
+
+```
    Request.
-   ```json
+   
+```json
    mutation{
   addArticleByArticleInput(
   articleInput: {
@@ -102,10 +104,11 @@ Response.
    
   }
 }
-  ```
+
+```
   Response.
   
-  ```json
+```json
   {
   "data": {
     "addArticleByArticleInput": {
@@ -115,5 +118,6 @@ Response.
     }
   }
 }
-  ```
+ 
+```
 
