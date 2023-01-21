@@ -41,7 +41,8 @@ Response.
 # Different type of mutation queries
 * Implementing mutation with single fields/arguments
    Request.
-  ```json
+   
+```json
    mutation{
   addArticle(
     title:"amazon cloud"
@@ -56,22 +57,25 @@ Response.
     }
   }
 }
+
 ```
 Response.
+
  ```json
-  {
-  "data": {
-    "addArticle": {
-      "id": 5,
-      "text": "today will start amazon cloud session",
-      "title": "amazon cloud",
-      "author": {
-        "id": 1
+      {
+      "data": {
+        "addArticle": {
+          "id": 5,
+          "text": "today will start amazon cloud session",
+          "title": "amazon cloud",
+          "author": {
+            "id": 1
+          }
+        }
       }
     }
-  }
-}
  ```
+ 
 * Implementing mutation with input type.
 
   ```json
@@ -100,6 +104,7 @@ Response.
 }
   ```
   Response.
+  
   ```json
   {
   "data": {
