@@ -91,7 +91,7 @@ Response.
    
 ```json
    mutation{
-  addArticleByArticleInput(
+  createArticle(
   articleInput: {
     
     title:"additing article by input type"
@@ -111,7 +111,7 @@ Response.
 ```json
   {
   "data": {
-    "addArticleByArticleInput": {
+    "createArticle": {
       "id": 3,
       "text": "article text will goes here",
       "title": "additing article by input type"
@@ -126,8 +126,8 @@ Request.
 
 ```json
 mutation
-  addArtucleToCard($input:ArticleInput){
-  addArticleByArticleInput(articleInput: $input){
+  createArticle($input:ArticleInput){
+  createArticle(articleInput: $input){
     id
     text
     title
@@ -156,7 +156,7 @@ Response.
 
 {
   "data": {
-    "addArticleByArticleInput": {
+    "createArticle": {
       "id": 8,
       "text": "article text will goes here",
       "title": "additing article by input type"
