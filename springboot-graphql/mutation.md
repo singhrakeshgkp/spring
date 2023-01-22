@@ -41,7 +41,8 @@ Response.
 # Different type of mutation queries
 * Implementing mutation with single fields/arguments
    Request.
-  ```json
+   
+```json
    mutation{
   addArticle(
     title:"amazon cloud"
@@ -56,36 +57,41 @@ Response.
     }
   }
 }
+
 ```
 Response.
+
  ```json
-  {
-  "data": {
-    "addArticle": {
-      "id": 5,
-      "text": "today will start amazon cloud session",
-      "title": "amazon cloud",
-      "author": {
-        "id": 1
+      {
+      "data": {
+        "addArticle": {
+          "id": 5,
+          "text": "today will start amazon cloud session",
+          "title": "amazon cloud",
+          "author": {
+            "id": 1
+          }
+        }
       }
     }
-  }
-}
  ```
+ 
 * Implementing mutation with input type.
 
-  ```json
+```json
   input ArticleInput{
     id: Int
     title: String!
     text: String!
     authorId: Int
 }
-  ```
+
+```
    Request.
-   ```json
+   
+```json
    mutation{
-  addArticleByArticleInput(
+  createArticle(
   articleInput: {
     
     title:"additing article by input type"
@@ -98,17 +104,64 @@ Response.
    
   }
 }
-  ```
+
+```
   Response.
-  ```json
+  
+```json
   {
   "data": {
-    "addArticleByArticleInput": {
+    "createArticle": {
       "id": 3,
       "text": "article text will goes here",
       "title": "additing article by input type"
     }
   }
 }
-  ```
+ 
+```
 
+* Mutation query with input as variable in request.<br/>
+Request.
+
+```json
+mutation
+  createArticle($input:ArticleInput){
+  createArticle(articleInput: $input){
+    id
+    text
+    title
+   
+  }
+}
+
+
+```
+Variables.
+
+```json
+
+{ 
+   "input":{
+     "title":"additing article by input type",
+     "text":"article text will goes here",
+    "authorId": 3
+  }
+}
+
+```
+Response.
+
+```json
+
+{
+  "data": {
+    "createArticle": {
+      "id": 8,
+      "text": "article text will goes here",
+      "title": "additing article by input type"
+    }
+  }
+}
+
+```
