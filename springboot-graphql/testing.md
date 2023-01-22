@@ -16,7 +16,7 @@
 ### Writing Integration Test cases for Mutation
 - Create a mutation test class annotate it with ``` @SpringBootTest and @AutoConfigureGraphQlTester ``` annotation
 - Autowire ``` GraphQlTester ``` class. Write the test method
-- Pass the input type argument by constructing a map as shown below.
+- Pass the input type argument by constructing a map as shown below and execute the test case.
 
 	  ```
 		  Map<String, Object> map = new HashMap<>();
@@ -32,5 +32,5 @@
 			"authorId": 2
 			}
 	 ```
-- Execute the test case.
-- vfdfvv
+### dsfdsf
+
