@@ -4,13 +4,11 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/graphqltest
+    url: jdbc:mysql://${DB_HOST_NAME:localhost}:${MYSQLDB_LOCAL_PORT:3306}/${MYSQL_DATABASE:test}
     username: root
-    password: root
-    
-    
+    password: ${MYSQL_ROOT_PASSWORD:root}
   graphql:
     graphiql:
       enabled: true

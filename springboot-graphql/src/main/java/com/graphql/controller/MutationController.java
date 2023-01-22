@@ -47,7 +47,7 @@ public class MutationController {
 	
 	/*Type2- with input type arguments*/
 	@MutationMapping
-	public Article addArticleByArticleInput(@Argument ArticleInput articleInput){
+	public Article createArticle(@Argument ArticleInput articleInput){
 		
 		Article article = new Article(null, articleInput.getTitle(), articleInput.getText(), articleInput.getAuthorId());
 		return articleRepository.save(article);

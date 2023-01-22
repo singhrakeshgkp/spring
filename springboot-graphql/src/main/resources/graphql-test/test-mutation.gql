@@ -1,0 +1,8 @@
+mutation createArticleOperation($input:ArticleInput){
+  createArticle(articleInput: $input){
+    id
+    text
+    title
+   
+  }
+}

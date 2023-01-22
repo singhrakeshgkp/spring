@@ -33,6 +33,22 @@ public class Article implements BaseEntity {
 	@Column(name="author_id")
     private Integer authorId;
 	
+	public Article(Integer id, String title, String text, Integer authorId) {
+		this.id=id;
+		this.title = title;
+		this.text = text;
+		this.authorId = authorId;
+		
+	}
+	
+	private String firstName;
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

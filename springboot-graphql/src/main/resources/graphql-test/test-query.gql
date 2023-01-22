@@ -1,0 +1,20 @@
+query articleById($id: Int!){
+  article(id:$id){
+    id
+    title
+    author{
+      id
+      userName
+    }
+    
+  }
+}
+
+
+query getAllArticles{
+	
+articles{
+ id
+ title
+}
+}

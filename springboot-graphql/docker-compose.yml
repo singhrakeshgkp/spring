@@ -1,0 +1,26 @@
+version: '3'
+services: 
+  springboot-graphql:
+    image: springboot-graphql
+    env_file:
+     - .env
+    restart: on-failure
+    depends_on:
+      - mysqldb
+    #restart: always
+    build: . # use command docker compose up --build to build the image
+             #(build: . means it will use docker file available in current dir)
+    ports:
+      - ${SPRING_DOCKER_PORT}:${SPRING_LOCAL_PORT}
+  mysqldb:
+   #container-name: mydbcontainer
+   image: mysql
+   env_file:
+    - .env
+   #env_file: ./environment.env
+   volumes:
+     - ./dbvolume:/var/lib/mysql
+   ports:
+    - ${MYSQLDB_DOCKER_PORT}:${MYSQLDB_LOCAL_PORT}
+   
+   

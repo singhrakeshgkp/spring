@@ -1,7 +1,7 @@
 type Mutation{
 addProfile(userName: String!, bio: String!): Profile!
 addArticle(title: String!, text: String!, authorId: Int!):Article!
-addArticleByArticleInput(articleInput: ArticleInput):Article!
+createArticle(articleInput: ArticleInput):Article!
 }
 
 input ArticleInput{
