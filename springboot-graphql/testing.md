@@ -17,18 +17,20 @@
 - Create a mutation test class annotate it with ``` @SpringBootTest and @AutoConfigureGraphQlTester ``` annotation
 - Autowire ``` GraphQlTester ``` class. Write the test method
 - Pass the input type argument by constructing a map as shown below.
-  ```
-  Map<String, Object> map = new HashMap<>();
-		map.put("title", "this is test article");
-		map.put("text", "tesfsjdkfdsff");
-		map.put("authorId", 2);
-   
- above is equivalent to below json
- 
-     {
-			     "title":"additing article by input type",
-			     "text":"article text will fdf here",
-			    "authorId": 2
-			 }
-  ```
+
+	  ```
+		  Map<String, Object> map = new HashMap<>();
+				map.put("title", "this is test article");
+				map.put("text", "tesfsjdkfdsff");
+				map.put("authorId", 2);
+
+		  above is equivalent to below json
+
+			{
+			"title":"additing article by input type",
+			"text":"article text will fdf here",
+			"authorId": 2
+			}
+	 ```
 - Execute the test case.
+- vfdfvv
