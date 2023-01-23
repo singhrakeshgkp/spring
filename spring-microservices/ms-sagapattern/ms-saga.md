@@ -42,5 +42,5 @@
   - sdkjfjf
   - sdjkdff
   - fkdsf <br/>
-  for more details how to create these services [click here](/spring/spring-microservices/ms-sagapattern/ms-config.md)
+  for more details how to create these services [click here](/spring-microservices/ms-sagapattern/ms-config.md)
  
