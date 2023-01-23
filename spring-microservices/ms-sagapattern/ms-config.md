@@ -52,4 +52,4 @@
       axoniq.axonserver.hostname=localhost
       axoniq.axonserver.devmode.enabled=true
      ```
-  - run the axon server, you will observe that server will be started on port 4242 and with the given configuration
+   - run the axon server, you will observe that server will be started on port 4242 and with the given configuration
