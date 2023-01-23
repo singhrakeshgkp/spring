@@ -22,12 +22,18 @@
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
   
-# Configure api-gateway
+# Configure gateway service
  - Create new spring boot application, add eureka client , spring cloud gateway and reactive web dependency
  - Annotate mail class with ``` @EnableDiscoveryClient ``` annotation
  - Add the following properties in application.properties file.
    ```
-   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
-   spring.application.name=gateway-service
-   server.port=5052
+     eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+     spring.application.name=gateway-service
+     server.port=5052
+     #enable automatic routing with resource locator. it will locate the service by its name
+     spring.cloud.gateway.discovery.locator.enabled=true
+
+     #by default service name in eureka will appear in capital letter, and if we try to acccess the resource with
+     #service name(service name in lower case) it will fail to handle this i have used below properties.
+     spring.cloud.gateway.discovery.locator.lower-case-service-id=true
    ```
