@@ -55,11 +55,12 @@
    - run the axon server, you will observe that server will be started on port 4242 and with the given configuration
 ### Running Axon server inside docker
   - Use the following command to run axon in docker
+  
     ```
-   docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "C:/workspace/docker-data/data":/data -v "C:/workspace/docker-data/data/eventdata":/eventdata -v "C:/workspace/docker-data/config":/config axoniq/axonserver
-   
-    -p -> stand for publish
-    axoniq/axonserver -> we havn't specified the version so by default it will pull latest version
-    
+     docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "C:/workspace/docker-data/data":/data -v "C:/workspace/docker-data/data/eventdata":/eventdata -v "C:/workspace/docker-data/config":/config axoniq/axonserver
+
+      -p -> stand for publish
+      axoniq/axonserver -> we havn't specified the version so by default it will pull latest version
+
     ```
     
