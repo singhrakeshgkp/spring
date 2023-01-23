@@ -37,3 +37,19 @@
      #service name(service name in lower case) it will fail to handle this i have used below properties.
      spring.cloud.gateway.discovery.locator.lower-case-service-id=true
    ```
+      
+# Configure Axon Server
+
+### Using Zip file on windows/Linux
+- Go to ``` https://developer.axoniq.io/download ``` and download the latest zip file
+-  Extract it on your machine and run the jar using java -jar command. Axon server will be started on default port 8024  ``` http://localhost:8024/ ```
+-  Configure Action server properties. configuration details can be found [here](https://docs.axoniq.io/reference-guide/axon-server/administration/admin-configuration/configuration)
+   - create new folder named ``` config ``` under axon folder
+   - create new file named ``` actonserver.properties ``` and add the following properties
+     ```
+      server.port=4242
+      axoniq.axonserver.name=testaxon-server
+      axoniq.axonserver.hostname=localhost
+      axoniq.axonserver.devmode.enabled=true
+     ```
+  - run the axon server, you will observe that server will be started on port 4242 and with the given configuration
