@@ -35,14 +35,18 @@
       <groupId>org.axonframework</groupId>
       <artifactId>axon-spring-boot-starter</artifactId>
       <version>4.6.3</version>
-		  </dependency>
+    </dependency>
   ```
 - Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
-- Autowire Environment and CommandGateway
-- 
+- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ```. Diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS.jpg)
+- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
+- Annotate the aggregate class with ``` @Aggregate ``` annotation
+- Create new class ``` ProductCreatedEvent  ```
+	
 </details>
   
 # Configure gateway service
+	
  - Create new spring boot application, add eureka client , spring cloud gateway and reactive web dependency
  - Annotate mail class with ``` @EnableDiscoveryClient ``` annotation
  - Add the following properties in application.properties file.
