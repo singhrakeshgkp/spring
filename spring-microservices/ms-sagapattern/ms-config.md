@@ -41,7 +41,8 @@
 - Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ```. Diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS.jpg)
 - Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
 - Annotate the aggregate class with ``` @Aggregate ``` annotation
-- Create new class ``` ProductCreatedEvent  ```
+- Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
+- Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation. 
 	
 </details>
   
