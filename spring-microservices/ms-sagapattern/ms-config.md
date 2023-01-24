@@ -14,6 +14,9 @@
    
 # Configure Product Micorservice
 
+<details>
+ <summary><b>Steps 1</b></summary>
+ 
 - Create new spring boot application and add spring web, lombok and eureka client dependencies
 - Create a controller class and define get, post and put method
 - Annotate main class with ``` @EnableDiscoveryClient ``` annotation
@@ -21,6 +24,23 @@
   ```
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
+</details>
+
+<details>
+ <summary><b>Step 2</b></summary>
+ 
+- Add Axon framework dependency in pom.xml file
+  ```
+     <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-spring-boot-starter</artifactId>
+      <version>4.6.3</version>
+		  </dependency>
+  ```
+- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
+- Autowire Environment and CommandGateway
+- 
+</details>
   
 # Configure gateway service
  - Create new spring boot application, add eureka client , spring cloud gateway and reactive web dependency
