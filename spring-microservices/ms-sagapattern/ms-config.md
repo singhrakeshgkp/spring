@@ -63,4 +63,8 @@
       axoniq/axonserver -> we havn't specified the version so by default it will pull latest version
 
     ```
+ - Configure axon srver properties
+   - copy the axonserver.properties file (earlier we created) inside ``` docker-data/config ``` directory
+   - run the application again. you will observe action server will be started with the properties given in config
+   - try to access ``` localhost:8024 ```
     
