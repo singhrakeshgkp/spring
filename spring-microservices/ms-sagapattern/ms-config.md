@@ -1,4 +1,4 @@
-# Configure Eureka Discovery Server.
+# Configure Eureka Discovery Server. step-1
  - Create new Spring starter project, add required dependency
  - If multiple instance of Eureka running in that case it me play role of client and server, here we will be running single instance so included only server repo in pom
  - Annotate main class with ``` @EnableEurekaServer ``` annotation
@@ -12,41 +12,21 @@
    eureka.client.service-url.defaultZone=localhost//8761/eureka
    ```
    
-# Configure Product Micorservice
-
-<details>
- <summary><b>Steps 1</b></summary>
- 
-- Create new spring boot application and add spring web, lombok and eureka client dependencies
-- Create a controller class and define get, post and put method
-- Annotate main class with ``` @EnableDiscoveryClient ``` annotation
-- specify the following properties in application.properties file
+# Configure Product Micorservice. step-2 
+ - Create new spring boot application and add spring web, lombok and eureka client dependencies
+ - Create a controller class and define get, post and put method
+ - Annotate main class with ``` @EnableDiscoveryClient ``` annotation
+ - specify the following properties in application.properties file
   ```
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
-</details>
-
-<details>
- <summary><b>Step 2</b></summary>
- 
-- Add Axon framework dependency in pom.xml file
-  ```
-     <dependency>
-      <groupId>org.axonframework</groupId>
-      <artifactId>axon-spring-boot-starter</artifactId>
-      <version>4.6.3</version>
-		  </dependency>
-  ```
-- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
-- Autowire Environment and CommandGateway
-- 
-</details>
-  
-# Configure gateway service
- - Create new spring boot application, add eureka client , spring cloud gateway and reactive web dependency
- - Annotate mail class with ``` @EnableDiscoveryClient ``` annotation
- - Add the following properties in application.properties file.
-   ```
+	
+# Configure gateway service step-3
+	
+  - Create new spring boot application, add eureka client , spring cloud gateway and reactive web dependency
+  - Annotate mail class with ``` @EnableDiscoveryClient ``` annotation
+  - Add the following properties in application.properties file.
+    ```
      eureka.client.service-url.defaultZone=http://localhost:8761/eureka
      spring.application.name=gateway-service
      server.port=5052
@@ -56,9 +36,9 @@
      #by default service name in eureka will appear in capital letter, and if we try to acccess the resource with
      #service name(service name in lower case) it will fail to handle this i have used below properties.
      spring.cloud.gateway.discovery.locator.lower-case-service-id=true
-   ```
+    ```
       
-# Configure Axon Server
+# Configure Axon Server. step -4
 
 ### Using Zip file on windows/Linux
 - Go to ``` https://developer.axoniq.io/download ``` and download the latest zip file
@@ -88,3 +68,22 @@
    - run the application again. you will observe action server will be started with the properties given in config
    - try to access ``` localhost:8024 ```
     
+# CQRS Pattern- step 5
+
+### Persisting product event in event store
+
+- Add Axon framework dependency in pom.xml file
+```
+<dependency>
+<groupId>org.axonframework</groupId>
+<artifactId>axon-spring-boot-starter</artifactId>
+<version>4.6.3</version>
+</dependency>
+```
+- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
+- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` 
+- diagram for same is [here](/spring-microservices/ms-  sagapattern/CQRS_gtw.jpg)	
+- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
+- Annotate the aggregate class with ``` @Aggregate ``` annotation
+- Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
+- Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation.
