@@ -70,19 +70,25 @@
     
 # CQRS Pattern- step 5
 
-### Persisting product event in event store
-
+<details><summary><b>Persisting product event in event store</b></summary>
+	
 - Add Axon framework dependency in pom.xml file
-```
-<dependency>
-<groupId>org.axonframework</groupId>
-<artifactId>axon-spring-boot-starter</artifactId>
-<version>4.6.3</version>
-</dependency>
-```
-- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
-- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS_gtw.jpg)	
+  ```
+  <dependency>
+   <groupId>org.axonframework</groupId>
+    <artifactId>axon-spring-boot-starter</artifactId>
+    <version>4.6.3</version>
+  </dependency>
+  ```
+- Create new Command java class. Naming convenstion should be like (verb)+(noun)+Command. i.e, CreateProductCommmand.
+- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS_gtw.jpg)	 
 - Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
 - Annotate the aggregate class with ``` @Aggregate ``` annotation
-- Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
+- Create new class ``` ProductCreatedEvent  ``` (noun)+(verb)+Event
 - Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation.
+- Run Axon server first and then run your spring boot application, you should be able to see the event details on Axon server dashboard
+	
+</details>
+
+### sdfdsf	
+	
