@@ -70,7 +70,7 @@
     
 # CQRS Pattern- step 5
 
-For product MS CQRS diagram click[here](/spring-microservices/ms-sagapattern/CQRS_productms.jpg)<br/>
+For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQRS_productms.jpg)<br/>
 <details><summary><b>Persisting product event in event store</b></summary>
 	
 - Add Axon framework dependency in pom.xml file
@@ -89,6 +89,18 @@ For product MS CQRS diagram click[here](/spring-microservices/ms-sagapattern/CQR
 - Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation.
 - Run Axon server first and then run your spring boot application, you should be able to see the event details on Axon server dashboard
 	
+</details>
+
+<details><summary><b>Persisting product event DB</b></summary>
+	
+
+- Add spring data jpa starter and h2 dependency in pom.xml
+- Add required db properties in application.properties file, create persistent and repo classess
+- Create event handler class ``` ProductEventHandler ``` annotate it with ``` @Component``` annotation
+- Create new method in event handler calss (note method signature annotated with @EventSourceHandler should match), write the logic to persist the data in db
+- Run your application, try to access h2 console via gateway url ``` http://localhost:5052/product-service/h2-console ``` 
+- You will observe data would be present in the database
+
 </details>
 
 ### sdfdsf	
