@@ -20,7 +20,7 @@
   ```
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
-###### CQRS Pattern - Persisting data in event store and product database step-5
+### CQRS Pattern - Persisting data in event store and product database step-5
 
     - Add Axon framework dependency in pom.xml file
     
