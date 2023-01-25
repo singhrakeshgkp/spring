@@ -23,22 +23,22 @@
   ```
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
+### CQRS Pattern - Persisting data in event store and product database
 
- 
-- Add Axon framework dependency in pom.xml file
-  ```
-     <dependency>
-      <groupId>org.axonframework</groupId>
-      <artifactId>axon-spring-boot-starter</artifactId>
-      <version>4.6.3</version>
-    </dependency>
-  ```
-- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
-- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ```. Diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS.jpg)
-- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
-- Annotate the aggregate class with ``` @Aggregate ``` annotation
-- Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
-- Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation. 
+	- Add Axon framework dependency in pom.xml file
+	  ```
+	     <dependency>
+	      <groupId>org.axonframework</groupId>
+	      <artifactId>axon-spring-boot-starter</artifactId>
+	      <version>4.6.3</version>
+	    </dependency>
+	  ```
+	- Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
+	- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ```. Diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS.jpg)
+	- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
+	- Annotate the aggregate class with ``` @Aggregate ``` annotation
+	- Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
+	- Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation. 
   
 # Configure gateway service
 	
