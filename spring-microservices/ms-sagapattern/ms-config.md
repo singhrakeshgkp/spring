@@ -81,8 +81,7 @@
 </dependency>
 ```
 - Create new Command java class. Naming convenstion should be like <verb><noun>Command. i.e, CreateProductCommmand
-- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` 
-- diagram for same is [here](/spring-microservices/ms-  sagapattern/CQRS_gtw.jpg)	
+- Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS_gtw.jpg)	
 - Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
 - Annotate the aggregate class with ``` @Aggregate ``` annotation
 - Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
