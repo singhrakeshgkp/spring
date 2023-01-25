@@ -70,6 +70,7 @@
     
 # CQRS Pattern- step 5
 
+For product MS CQRS diagram click[here](/spring-microservices/ms-sagapattern/CQRS_productms.jpg)<br/>
 <details><summary><b>Persisting product event in event store</b></summary>
 	
 - Add Axon framework dependency in pom.xml file
