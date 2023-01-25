@@ -14,8 +14,7 @@
    
 # Configure Product Micorservice
 
-<details>
- <summary><b>Steps 1</b></summary>
+
  
 - Create new spring boot application and add spring web, lombok and eureka client dependencies
 - Create a controller class and define get, post and put method
@@ -24,10 +23,7 @@
   ```
   eureka.client.service-url.defaultZone=http://localhost:8761/eureka
   ```
-</details>
 
-<details>
- <summary><b>Step 2</b></summary>
  
 - Add Axon framework dependency in pom.xml file
   ```
@@ -43,8 +39,6 @@
 - Annotate the aggregate class with ``` @Aggregate ``` annotation
 - Create new class ``` ProductCreatedEvent  ``` <noun><verb>Event
 - Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation. 
-	
-</details>
   
 # Configure gateway service
 	
