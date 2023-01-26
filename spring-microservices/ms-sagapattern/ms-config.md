@@ -91,15 +91,32 @@ For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQ
 	
 </details>
 
-<details><summary><b>Persisting product event DB</b></summary>
+<details><summary><b>Persisting product event in DB</b></summary>
 	
-
 - Add spring data jpa starter and h2 dependency in pom.xml
 - Add required db properties in application.properties file, create persistent and repo classess
 - Create event handler class ``` ProductEventHandler ``` annotate it with ``` @Component``` annotation
 - Create new method in event handler calss (note method signature annotated with @EventSourceHandler should match), write the logic to persist the data in db
 - Run your application, try to access h2 console via gateway url ``` http://localhost:5052/product-service/h2-console ``` 
 - You will observe data would be present in the database
+
+</details>
+
+<details><summary><b>CQRS Querying data</b></summary>
+For details how it works checkout the [diagram](/spring-microservices/ms-sagapattern/cqrs_querying.jpg)
+	
+- Create new ProductQueryController class provide the required dependency
+- Create a query handler named ``` ProductQueryHandler ```, create a method and annotate it with ```@QueryHandler ``` annotation
+- Run the application, you should be able to get the list of products
+
+</details>
+
+<details><summary><b>Logging or Validation the command request using Message interceptor</b></summary>
+
+	
+- Create a interceptor class called ``` CommandInterceptor ``` annotate it with ```@component``` annotation.
+- Create a query handler named ``` ProductQueryHandler ```, create a method and annotate it with ```@QueryHandler ``` annotation
+- Run the application, you should be able to get the list of products
 
 </details>
 
