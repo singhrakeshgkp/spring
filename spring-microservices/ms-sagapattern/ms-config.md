@@ -129,6 +129,23 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 </details>
 
 
+<details><summary><b>CQRS - Validation, Error Handling & Transaction Management</b></summary>
+
+- what is set based consistency problem? How does command module will check if record is already exists?
+- A.-> Command module can check if record is already exist using separate db called lookup table. To setup these things follow below steps.
+  - Create a new entity class named ```ProductrLookup```, add ony product prop which is required for lookup such as unique id
+  - Create a  repository ```ProductLookupRepo``` for ProductLookup entity
+  - Create a new handler class ```ProductLookupEventHandler`` annotate it with ```@Component and @ProcessingGroup("product-group") ```
+  - Also annotate other product event handler class used in the project such as ```ProductEventHandler``` with annotation ```@ProcessingGroup("product-group")```
+  - The ```@ProcessingGroup("product-group")``` will execute all the product related events in the same thread, so it would be easier to rollback in case of failure
+  - 
+- Create a query handler named ``` ProductQueryHandler ```, create a method and annotate it with ```@QueryHandler ``` annotation
+- Run the application, you should be able to get the list of products
+
+</details>
+
+
+
 
 ### sdfdsf	
 	
