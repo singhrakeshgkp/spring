@@ -131,7 +131,7 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 
 <details><summary><b>CQRS - Validation, Error Handling & Transaction Management</b></summary>
 
-- what is set based consistency problem? How does command module will check if record is already exists?
+- <b>what is set based consistency problem? How does command module will check if record is already exists?</b>
 - A.-> Command module can check if record is already exist using separate db called lookup table. To setup these things follow below steps.
   - Create a new entity class named ```ProductrLookup```, add ony product prop which is required for lookup such as unique id and product name
   - Create a  repository ```ProductLookupRepo``` for ProductLookup entity
@@ -141,6 +141,7 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
   - Add following prop in application.properties file.
 	```axon.eventhandling.processors.product-group.mode=subscribing```
   - Write the logic to check if entity exist in interceptor class.
+  - CQRS [diagram](/spring-microservices/ms-sagapattern/CQRS_setbased.jpg) to check if record exist in db.
   - Sequence of the execution is as follow.
     ```
 	Controller->Interceptor-> CommandHandler(@CommandHandler) or Aggregate-> EventHandler-> AggregateLifecycle.apply(event) -> Method annotated with @EventSourcingHandler annotation -> 
@@ -149,7 +150,15 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 	CommandHandler -> Method Annotated with @CommandHandler annotation
 	EventHandler-> ProductEventHandler will have handler method annotated with @EventHandler annotation
     ```
-  
+- <b>CQRS Error Handling</b>
+  - Please refer the given [diagram](/spring-microservices/ms-sagapattern/CQRS_error.jpg)
+  - Create a new Centralized Error Handler calss and annotate it with  ```@ControllerAdvice``` annotation 
+  - Now remove try catch from ProductCommandController class and try to run the application
+  - You will observe controller advice code will be executed if any error occurs.
+  - dfdf
+- sdfdsf
+- sdfds
+- sdfds
 
 </details>
 
