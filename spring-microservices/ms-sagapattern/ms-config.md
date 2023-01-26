@@ -91,6 +91,23 @@ For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQ
 	
 </details>
 
+<details><summary><b>Logging or Validation the command request using Message interceptor</b></summary>
+
+	
+- Create a interceptor class called ``` CommandInterceptor ``` (this calss should implement MessageDispatchInterceptor interface) annotate it with ```@component``` annotation.
+- Register the ```CommandInterceptor``` on command bus to do so follow the below steps.
+  - Go to your main spring boot class
+  - add following code, which will get the command interceptor bean from contex and register it with bus.
+    ```
+     @Autowired
+	public void registerCommandInterceptor(ApplicationContext context, CommandBus bus) {
+		bus.registerDispatchInterceptor(context.getBean(CommandInterceptor.class));
+	}
+    ```
+	
+- 
+
+</details>
 <details><summary><b>Persisting product event in DB</b></summary>
 	
 - Add spring data jpa starter and h2 dependency in pom.xml
@@ -111,14 +128,7 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 
 </details>
 
-<details><summary><b>Logging or Validation the command request using Message interceptor</b></summary>
 
-	
-- Create a interceptor class called ``` CommandInterceptor ``` annotate it with ```@component``` annotation.
-- Create a query handler named ``` ProductQueryHandler ```, create a method and annotate it with ```@QueryHandler ``` annotation
-- Run the application, you should be able to get the list of products
-
-</details>
 
 ### sdfdsf	
 	
