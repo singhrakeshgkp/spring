@@ -152,9 +152,17 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
     ```
 - <b>CQRS Error Handling</b>
   - Please refer the given [diagram](/spring-microservices/ms-sagapattern/CQRS_error.jpg)
-  - Create a new Centralized Error Handler calss and annotate it with  ```@ControllerAdvice``` annotation 
-  - Now remove try catch from ProductCommandController class and try to run the application
-  - You will observe controller advice code will be executed if any error occurs.
+  - <b>CQRS Controller/Interceptor Error Handing</b>
+    - Create a new Centralized Error Handler calss and annotate it with  ```@ControllerAdvice``` annotation
+    - Now remove try catch from ProductCommandController class and try to run the application
+    - You will observe controller advice code will be executed if any error occurs.
+  - <b>CQRS Command Layer Error Handling</b>
+    - Go to your command/AggregateClass in my case it is ```ProductAggregate``` and throw exception explicitly just after ```AggregateLifecycle.apply(event);```
+    - You will observe that even if we throw the exception after aggrCycle.apply() ```@EventSourcingHandler``` method will not be executed this is because axon framework does not immediately persist the event first it state it, after stage if any exception thrown it will automatically rollback from same stage.
+  - <b>CQRS Event Layer Error Handling</b>
+  -  
+  - 
+  - 
   - dfdf
 - sdfdsf
 - sdfds
