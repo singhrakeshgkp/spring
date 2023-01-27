@@ -160,7 +160,11 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
     - Go to your command/AggregateClass in my case it is ```ProductAggregate``` and throw exception explicitly just after ```AggregateLifecycle.apply(event);```
     - You will observe that even if we throw the exception after aggrCycle.apply() ```@EventSourcingHandler``` method will not be executed this is because axon framework does not immediately persist the event first it state it, after stage if any exception thrown it will automatically rollback from same stage.
   - <b>CQRS Event Layer Error Handling</b>
-  -  
+    - Default behavior of axon framework is to handle the exception, log it and continue the execution.
+    - Create an error handler method in ```ProductEventHandler``` class and annotate it with ```@ExceptionHandler``` annotation.
+    - Again we have to propogate the exception to otherwise axon framework will handle log and continue the execution. To propagate further follow the below steps.
+      - Create a new class ```ProductServiceEventHandlerException``` implementing ```ListenerInvocationErrorHandler``` interface
+      - Now we have to register the above exception class to our processor group which is ```product-group```, code written in spring boot main class.
   - 
   - 
   - dfdf
