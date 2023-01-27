@@ -68,7 +68,7 @@
    - run the application again. you will observe action server will be started with the properties given in config
    - try to access ``` localhost:8024 ```
     
-# CQRS Pattern- step 5
+# CQRS Pattern step-5
 
 For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQRS_productms.jpg)<br/>
 <details><summary><b>Persisting product event in event store</b></summary>
