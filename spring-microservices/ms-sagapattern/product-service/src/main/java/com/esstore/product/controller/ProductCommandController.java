@@ -17,33 +17,28 @@ import com.esstore.product.model.Product;
 
 @RestController
 @RequestMapping("/api/products")
-public class ProductRestController {
+public class ProductCommandController {
 
 	private final CommandGateway commandGateway;
 	
 	
 	  @Autowired 
-	  public ProductRestController(CommandGateway commandGateway){ 
+	  public ProductCommandController(CommandGateway commandGateway){ 
 	  this.commandGateway = commandGateway; 
 	  }
 	 
-	
-	@GetMapping("/greetings")
-	public  String greetings() {
-		return "hello world";
-	}
-	
 	@PostMapping
 	private ResponseEntity<String> createProduct(@RequestBody Product product){
 		CreateProductCommand command = CreateProductCommand.builder()
 									   .productName(product.getProductName())
 									   .price(product.getPrice())
 									   .uniqueId(UUID.randomUUID().toString()).build();
-		try {
 		String status = commandGateway.sendAndWait(command);
 		return new ResponseEntity<String>(status,HttpStatus.CREATED);
-		}catch(Exception ex) {
-			return new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		/*
+		 * try { return new ResponseEntity<String>(status,HttpStatus.CREATED);
+		 * }catch(Exception ex) { return new
+		 * ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR); }
+		 */
 	}
 }

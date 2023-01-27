@@ -25,7 +25,7 @@ public class ProductAggregate {
 		
 	}
 	@CommandHandler
-	public ProductAggregate(CreateProductCommand createProductCommand) {
+	public ProductAggregate(CreateProductCommand createProductCommand) throws Exception {
 			// this method will be called when we call commandGateway.createCommand()
 		
 		//Step1 - Validate the request
@@ -40,6 +40,9 @@ public class ProductAggregate {
 		 * 
 		 */
 		AggregateLifecycle.apply(event);
+		/*
+		 * if(true) { throw new Exception("throwing error explicitly"); }
+		 */
 		}
 	
 	@EventSourcingHandler

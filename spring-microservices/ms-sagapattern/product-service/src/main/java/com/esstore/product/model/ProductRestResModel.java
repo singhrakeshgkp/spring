@@ -1,12 +1,12 @@
-package com.esstore.product.event;
+package com.esstore.product.model;
 
 import java.math.BigDecimal;
 
 import lombok.Data;
 
 @Data
-public class ProductCreatedEvent {
-	
+public class ProductRestResModel {
+
 	private  String uniqueId;
 	private  String productName;
 	private  BigDecimal price;
