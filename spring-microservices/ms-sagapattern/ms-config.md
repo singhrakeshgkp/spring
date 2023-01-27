@@ -162,20 +162,12 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
   - <b>CQRS Event Layer Error Handling</b>
     - Default behavior of axon framework is to handle the exception, log it and continue the execution.
     - Create an error handler method in ```ProductEventHandler``` class and annotate it with ```@ExceptionHandler``` annotation.
-    - Again we have to propogate the exception to otherwise axon framework will handle log and continue the execution. To propagate further follow the below steps.
+    - Again we have to propogate the exception,otherwise axon framework will handle, log the exception and continue the execution. To propagate further follow the below steps.
       - Create a new class ```ProductServiceEventHandlerException``` implementing ```ListenerInvocationErrorHandler``` interface
       - Now we have to register the above exception class to our processor group which is ```product-group```, code written in spring boot main class.
-  - 
-  - 
-  - dfdf
-- sdfdsf
-- sdfds
-- sdfds
+      - Now for testing  explicitly throw an exception from ProductEventHandler class.
+      - Run the application and try to create product, expected result -> data should not be saved in Product, Product Lookup and event store even if we throw the exception after caling repo.save method.
 
 </details>
-
-
-
-
-### sdfdsf	
+# Configure Order Service Step-6	
 	
