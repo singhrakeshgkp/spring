@@ -167,7 +167,7 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
       - Now we have to register the above exception class to our processor group which is ```product-group```, code written in spring boot main class.
       - Now for testing  explicitly throw an exception from ProductEventHandler class.
       - Run the application and try to create product, expected result -> data should not be saved in Product, Product Lookup and event store even if we throw the exception after caling repo.save method.
-
 </details>
+
 # Configure Order Service Step-6	
 	
