@@ -120,6 +120,7 @@ For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQ
 </details>
 
 <details><summary><b>CQRS Querying data</b></summary>
+	
 For details how it works checkout the [diagram](/spring-microservices/ms-sagapattern/cqrs_querying.jpg)
 	
 - Create new ProductQueryController class provide the required dependency
