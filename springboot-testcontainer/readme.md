@@ -24,8 +24,10 @@
 - Generate new token from sonar qube dashboard ``` my account -> security-> generate token(if already generated then ignore it)```
 - Run below command to link the report with sonar.
   ``` sonar:sonar -Dsonar.login=sqa_94810502f0092cd0c1254ebc8a18b8dc1011a4c6<generated token>```
-
-
+- Below command can also be used to link the report.
+  ```
+  clean verify sonar:sonar -Dsonar.projectKey=com.springtestcontainer:springboot-testcontainer -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_94810502f0092cd0c1254ebc8a18b8dc1011a4c6
+  ```
 # LogBack Integration with SpringBoot
  - Create ``` logback-spring.xml ``` file in your spring boot application class path.
  - Do the required changes in the ``` logback-spring.xml  ``` configuration file for example i have modified file name to ``` sbwtc.log ```
