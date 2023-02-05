@@ -1,4 +1,4 @@
-### Integrating swagger 
+# Swagger Integration 
  - Add following dependency in pom.xml
  -   ```
      <dependency>
@@ -7,12 +7,15 @@
      <version>1.6.4</version>
      </dependency>
      ```
- - 
  - Restart the server and try to access below urls
    -  ``` localhost:<port>/<application context>/v3/api-docs  ``` -> to access api docs ex. ``` http://localhost:8888/v3/api-docs  ```
    -  ``` localhost:<port>/<application context>/swagger-ui/index.html ``` -> to access swagger ui ex. ``` http://localhost:8888/swagger-ui/index.html  ```
 
-### LogBack Integration with SpringBoot
+# Jacoco Integration
+
+# Sonar Qube Integration
+
+# LogBack Integration with SpringBoot
  - Create ``` logback-spring.xml ``` file in your spring boot application class path.
  - Do the required changes in the ``` logback-spring.xml  ``` configuration file for example i have modified file name to ``` sbwtc.log ```
  -  ```
