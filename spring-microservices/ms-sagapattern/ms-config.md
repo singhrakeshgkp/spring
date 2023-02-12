@@ -171,4 +171,24 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 </details>
 
 # Configure Order Service Step-6	
-	
+- Create new application named order-service
+- Create new controler ```OrderCommandController``` with request mapping ```/api/orders```
+- Create new class ```CreateOrderCommand.java``` with following fields. Controller will use commandGateway to publish the CreateOrderCommand.
+  ```
+        public final String orderId; -> Randomly Generated string 
+	private final String userId; -> as of now we will pass some hardcoded value
+	private final String productId; ->
+	private final int quantity;
+	private final String addressId;
+	private final OrderStatus orderStatus;
+  ```
+- Create new ```OrderAggregate.java``` class.
+- ...... Similar to product service create even, exception handler, and other classes .
+- Now test your application.
+- use ```http://localhost:5052/order-service/h2-console``` url to access h2 database console
+- Below request and endpoints can be used to create new order
+  ```
+  localhost:5052/order-service/api/orders
+  
+  ```
+- Use ```localhost:5052/order-service/api/orders``` to check the order list
