@@ -2,7 +2,10 @@
 
 - Order Orchestration Saga [Diagram](/spring-microservices/ms-sagapattern/order_saga_orchestration.jpg)
 - Create a new class ```OrderSagaOrchestration.java``` 
+- create and common dependency (refer section Setup New Proj  for common classes )
 # Product MS -Step 8
+
+- create and common dependency (refer section Setup New Proj  for common classes )
 - Create a ```ReserveProductCommand``` Handler
   - Add core dependency in pom.xml
   - Add handler ReserveproductCommand Handler in ```ProductAggregate.java``` class
