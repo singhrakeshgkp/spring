@@ -189,6 +189,10 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 - Below request and endpoints can be used to create new order
   ```
   localhost:5052/order-service/api/orders
-  
+  {
+    "productId":"9876544",
+    "addressId":"test kdsfjdfk",
+    "quantity":3
+}
   ```
 - Use ```localhost:5052/order-service/api/orders``` to check the order list
