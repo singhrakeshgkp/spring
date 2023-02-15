@@ -37,10 +37,17 @@
 
 ### Creating Microservices
   - Discovery Service
+  - Gateway Service
   - Product Services
-  - kfjf
-  - sdkjfjf
-  - sdjkdff
-  - fkdsf <br/>
-  for more details how to create these services [click here](/spring-microservices/ms-sagapattern/ms-config.md)
+  - Order Service<br/>
+for more details how to create these services [click here](/spring-microservices/ms-sagapattern/ms-config.md)
+
+### Implementing Orchestration Patters
+
+<p>  
+ 
+ For more details click [here](/spring-microservices/ms-sagapattern/ms-axon-orchestration.md)
+
+
+</p>
  

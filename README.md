@@ -2,6 +2,7 @@
  * Spring Boot Test Container
    - Spring Boot + Mysql DB
    - Swagger integration
+   - Jacoco Integration
    - Sonar Qube
    - Integration + Unit Testing with Test Container
    - Docker + Docker Compose

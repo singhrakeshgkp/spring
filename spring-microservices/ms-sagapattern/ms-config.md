@@ -83,7 +83,7 @@ For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQ
   ```
 - Create new Command java class. Naming convenstion should be like (verb)+(noun)+Command. i.e, CreateProductCommmand.
 - Autowire Environment and CommandGateway. Command Gateway will send the command to ``` command bus ``` diagram for same is [here](/spring-microservices/ms-sagapattern/CQRS_gtw.jpg)	 
-- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregate.jpg)
+- Create aggreagate class named ``` ProductAggregate  ``` for more details see the [diagram](/spring-microservices/ms-sagapattern/product_aggregation.jpg)
 - Annotate the aggregate class with ``` @Aggregate ``` annotation
 - Create new class ``` ProductCreatedEvent  ``` (noun)+(verb)+Event
 - Create new method ``` on() in ProductAggregate class ``` annotate this method with ```@EventSourcingHandler``` annotation.
@@ -120,6 +120,7 @@ For product MS CQRS diagram click [here](/spring-microservices/ms-sagapattern/CQ
 </details>
 
 <details><summary><b>CQRS Querying data</b></summary>
+	
 For details how it works checkout the [diagram](/spring-microservices/ms-sagapattern/cqrs_querying.jpg)
 	
 - Create new ProductQueryController class provide the required dependency
@@ -170,4 +171,28 @@ For details how it works checkout the [diagram](/spring-microservices/ms-sagapat
 </details>
 
 # Configure Order Service Step-6	
-	
+- Create new application named order-service
+- Create new controler ```OrderCommandController``` with request mapping ```/api/orders```
+- Create new class ```CreateOrderCommand.java``` with following fields. Controller will use commandGateway to publish the CreateOrderCommand.
+  ```
+        public final String orderId; -> Randomly Generated string 
+	private final String userId; -> as of now we will pass some hardcoded value
+	private final String productId; ->
+	private final int quantity;
+	private final String addressId;
+	private final OrderStatus orderStatus;
+  ```
+- Create new ```OrderAggregate.java``` class.
+- ...... Similar to product service create even, exception handler, and other classes .
+- Now test your application.
+- use ```http://localhost:5052/order-service/h2-console``` url to access h2 database console
+- Below request and endpoints can be used to create new order
+  ```
+  localhost:5052/order-service/api/orders
+  {
+    "productId":"9876544",
+    "addressId":"test kdsfjdfk",
+    "quantity":3
+}
+  ```
+- Use ```localhost:5052/order-service/api/orders``` to check the order list
