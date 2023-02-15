@@ -13,7 +13,33 @@
 - Add Event sourcing method
 
 ### Step 9 - Handle the product reserved event in OrderSagaClass- OrderService
+- Add following method in OrderSagaClass 
+  ```
+  
+	@SagaEventHandler(associationProperty = "orderId")
+	public void handle(ProductReservedEvent productReservedEvent){
+  //Business logic 
+  }
+  ```
+- Before running the application perform below steps.
+  - add following properties in axon-server/config/axonserver.properties
+    ```
+    server.port=8024
+    axoniq.axonserver.name=testaxon-server
+    axoniq.axonserver.hostname=localhost
+    axoniq.axonserver.devmode.enabled=true
+    axoniq.axonserver.accesscontrol.token=welcome123
+    ```
+  - Config serializer and token in MS application.propertie or yml file
+    ```
+      axon.axonserver.token= welcome123
+      # Axon serializer config
+      axon.serializer.general=jackson
+      axon.serializer.events=jackson
+      axon.serializer.messages=jackson
 
+    ```
+  
 ### Setup New Proj  for common classes and include this as dependency in order and product MS
 - Create new spring starter project
 - Add Lombok and Axon starter dependency.
