@@ -66,5 +66,8 @@ Create Order Sequence
 4. OrderAggregate# on(someMethod annotated with @EventSourcingHandler) 
 5. OrderEventHandler#on(someMethod annotated with @EventHandler)
 6. OrderSagaOrchestration.java Method # handle(OrderCreatedEvent orderCreatedEvent)
-7. OrderSagaOrchestration.java Method # public void handle(ProductReservedEvent productReservedEvent) 
+7. ProductAggregate#public void handle(ReserveProductCommand reserveProductCommand)
+8. ProductAggregate#on(ProductReservedEvent productReservedEvent)
+9. ProductEventHandler#on(ProductReservedEvent productReservedEvent)
+10. OrderSagaOrchestration.java Method # public void handle(ProductReservedEvent productReservedEvent) 
 ```
