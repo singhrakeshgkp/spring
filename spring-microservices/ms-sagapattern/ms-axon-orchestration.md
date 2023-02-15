@@ -46,3 +46,25 @@
 - Remove build section from pom.xml
 - Remove spring boot main class and test class
 - Add it in order and product MS
+
+### Method will be executed in the following order.
+```
+Create Product Sequence
+---------------------------------------
+1. ProductController-> commandGateway.sendAndWait(command)
+2. CommandInterceptor
+3. ProductAggregate# ProductAggregate(constructor annotated with  @CommandHandler annotation)-> AggregateLifecycle.apply(someEvent)
+4. ProductAggregate# on(someMethod annotated with @EventSourcingHandler) 
+5. ProductEventHandler#on(someMethod annotated with @EventHandler) 
+--------------------------------------------------------------------------
+
+Create Order Sequence
+--------------------------------------------------------- 
+1. OrderController-> commandGateway.sendAndWait(command)
+2. CommandInterceptor
+3. OrderAggregate# OrderAggregate(constructor annotated with  @CommandHandler annotation)-> AggregateLifecycle.apply(someEvent)
+4. OrderAggregate# on(someMethod annotated with @EventSourcingHandler) 
+5. OrderEventHandler#on(someMethod annotated with @EventHandler)
+6. OrderSagaOrchestration.java Method # handle(OrderCreatedEvent orderCreatedEvent)
+7. OrderSagaOrchestration.java Method # public void handle(ProductReservedEvent productReservedEvent) 
+```
