@@ -3,3 +3,5 @@
 Click [here](/spring-microservices/ms-sagapattern/ms-saga.md) to read more about SAGA
 ### Spring Boot Microservices + Apache Camel Integration.
 
+Click [here](/spring-microservices/ms-apache-camel/spring-camel.md) for more details
+
