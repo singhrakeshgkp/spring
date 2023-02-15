@@ -8,6 +8,6 @@ import com.esstore.product.persistent.ProductLookup;
 @Repository
 public interface ProductLookupRepo  extends JpaRepository<ProductLookup, Long>{
 	
-	ProductLookup findByUniqueIdOrProductName(String uniqueId, String productName);
+	ProductLookup findByProductIdOrProductName(String productId, String productName);
 
 }

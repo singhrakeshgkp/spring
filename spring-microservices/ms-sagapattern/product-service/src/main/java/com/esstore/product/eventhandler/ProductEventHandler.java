@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import com.esstore.product.event.ProductCreatedEvent;
 import com.esstore.product.persistent.Product;
 import com.esstore.product.repo.ProductRepository;
+import com.estore.core.events.ProductReservedEvent;
 
 @Component
 @ProcessingGroup("product-group")
@@ -19,16 +20,24 @@ public class ProductEventHandler {
  * if we do not specify @ProcessingGroup("product-event") axon framework will by default assign the group which name will be your class package name.
  * */
 	@Autowired
-	ProductRepository productEventRepository;
+	ProductRepository productRepo;
 	
 	@EventHandler
 	public void on(ProductCreatedEvent event) throws Exception {
 		Product product = new Product();
 		BeanUtils.copyProperties(event, product);
-		productEventRepository.save(product);
+		productRepo.save(product);
 		//throw new Exception("throwing exception explicitly");
 	}
 	
+	
+	@EventHandler
+	public void on(ProductReservedEvent productReservedEvent) {
+	  Product product = productRepo.findByProductId(productReservedEvent.getProductId());
+	  product.setQuantity(product.getQuantity()-productReservedEvent.getQuantity());
+	  productRepo.save(product);
+	  
+	}
 	/* It will handle the exception which is thrown from same class*/
 	@ExceptionHandler(resultType = Exception.class)
 	public void handleError(Exception ex) throws Exception {
@@ -40,4 +49,6 @@ public class ProductEventHandler {
 		 */
 		throw ex;
 	}
+	
+	
 }

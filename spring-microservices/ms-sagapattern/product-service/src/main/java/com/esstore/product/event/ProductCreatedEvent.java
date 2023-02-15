@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class ProductCreatedEvent {
 	
-	private  String uniqueId;
+	private  String productId;
 	private  String productName;
 	private  BigDecimal price;
 	private  int quantity;

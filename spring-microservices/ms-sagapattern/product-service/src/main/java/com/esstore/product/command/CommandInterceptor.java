@@ -29,7 +29,7 @@ public class CommandInterceptor implements MessageDispatchInterceptor<Message<?>
 				//command specific logic can be written here such as validtion, etc
 				CreateProductCommand createProductCommand =(CreateProductCommand) command.getPayload();
 				log.info("Inside command specific logic block");
-				ProductLookup pLookup = repo.findByUniqueIdOrProductName(createProductCommand.getUniqueId(),createProductCommand.getProductName());
+				ProductLookup pLookup = repo.findByProductIdOrProductName(createProductCommand.getProductId(),createProductCommand.getProductName());
 				if(pLookup != null)
 					throw new EntityExistsException("Record with given product name is already exist");
 			}

@@ -12,7 +12,7 @@ import lombok.Data;
 public class CreateProductCommand {
 	
 	@TargetAggregateIdentifier
-	private final String uniqueId;
+	private final String productId;
 	private final String productName;
 	private final BigDecimal price;
 	private final int quantity;

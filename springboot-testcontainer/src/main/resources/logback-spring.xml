@@ -20,7 +20,7 @@
         <file>${LOGS}/sbwtc.log</file>
         <encoder
             class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d %p %C{1} [%t] %m%n S:%notEmpty{ %X{logMsg}}</Pattern>
+            <Pattern>%d %p %C{1} [%t] %m%n S: %msg%n</Pattern>
         </encoder>
 
         <rollingPolicy

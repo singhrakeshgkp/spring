@@ -12,7 +12,6 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -29,7 +28,7 @@ public class ProductLookup implements Serializable{
 	private Long id;
 	
 	@Column(name="product_id",unique = true)
-	private  String uniqueId;
+	private  String productId;
 	
 	@Column(name="product_name")
 	private String productName;

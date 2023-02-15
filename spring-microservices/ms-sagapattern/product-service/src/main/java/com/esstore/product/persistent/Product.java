@@ -26,7 +26,7 @@ public class Product implements Serializable  {
 	private Long id;
 	
 	@Column(name="product_id",unique = true)
-	private  String uniqueId;
+	private  String productId;
 	
 	@Column(name="product_name")
 	private  String productName;
@@ -45,12 +45,12 @@ public class Product implements Serializable  {
 		this.id = id;
 	}
 
-	public String getUniqueId() {
-		return uniqueId;
+	public String getProductId() {
+		return productId;
 	}
 
-	public void setUniqueId(String uniqueId) {
-		this.uniqueId = uniqueId;
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
 
 	public String getProductName() {

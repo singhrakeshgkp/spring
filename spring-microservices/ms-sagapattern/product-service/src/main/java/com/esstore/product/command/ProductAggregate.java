@@ -10,12 +10,14 @@ import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
 import com.esstore.product.event.ProductCreatedEvent;
+import com.estore.core.command.ReserveProductCommand;
+import com.estore.core.events.ProductReservedEvent;
 
 @Aggregate
 public class ProductAggregate {
 
 	@AggregateIdentifier
-	private  String uniqueId;
+	private  String productId;
 	private  String productName;
 	private  BigDecimal price;
 	private  int quantity;
@@ -45,13 +47,35 @@ public class ProductAggregate {
 		 */
 		}
 	
-	@EventSourcingHandler
-	public void on(ProductCreatedEvent event) {
+	@CommandHandler
+	public void handle(ReserveProductCommand reserveProductCommand) {
+		if(quantity > reserveProductCommand.getQuantity()) {
+			throw new IllegalArgumentException("insufficient quantity in the stock");
+		}
 		
-		this.uniqueId = event.getUniqueId();
-		this.productName = event.getProductName();
-		this.price = event.getPrice();
+		//Now publish the product reserved event
+		ProductReservedEvent event = ProductReservedEvent.builder()
+									 .productId(reserveProductCommand.getProductId())
+									 .orderId(reserveProductCommand.getOrderId())
+									 .userId(reserveProductCommand.getUserId())
+									 .quantity(reserveProductCommand.getQuantity())
+									 .build();
+		AggregateLifecycle.apply(event);
+	}
+	
+	@EventSourcingHandler
+	public void on(ProductCreatedEvent productCreatedEvent) {
+		
+		this.productId = productCreatedEvent.getProductId();
+		this.productName = productCreatedEvent.getProductName();
+		this.price = productCreatedEvent.getPrice();
 		
 	}
+	
+ @EventSourcingHandler
+ public void on(ProductReservedEvent productReservedEvent) {
+	 
+	 this.quantity -= productReservedEvent.getQuantity();
+ }
 	
 }

@@ -8,4 +8,5 @@ import com.esstore.product.persistent.Product;
 public interface ProductRepository extends JpaRepository<Product, Long>  {
 	
 	Iterable<Product> findByProductName(String productName);
+	Product findByProductId(String productId);
 }

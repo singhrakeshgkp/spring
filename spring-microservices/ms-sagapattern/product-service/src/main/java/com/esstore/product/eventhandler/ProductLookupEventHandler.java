@@ -14,13 +14,13 @@ import com.esstore.product.repo.ProductLookupRepo;
 public class ProductLookupEventHandler {
 
 	@Autowired
-	private ProductLookupRepo productLookupRepo;
+	private 	ProductLookupRepo productLookupRepo;
 	
 	/*Method name could be anything*/
 	@EventHandler
 	public void onXyz(ProductCreatedEvent productCreatedEvent) {
 		
-		ProductLookup pLookup = new ProductLookup(null, productCreatedEvent.getUniqueId(), productCreatedEvent.getProductName());
+		ProductLookup pLookup = new ProductLookup(null, productCreatedEvent.getProductId(), productCreatedEvent.getProductName());
 		productLookupRepo.save(pLookup);
 	}
 }
