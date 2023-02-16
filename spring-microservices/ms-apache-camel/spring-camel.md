@@ -55,3 +55,12 @@
 		.process(new TestProcessor()) // processing operation using processor
 		.to("log:product-timer");
    ```
+### Copy file from source to destination
+- Comment ```@Component``` annotation of class ProductTimerRouter.java
+- Create new router class ```FileTransferRouter.java``
+- Use the following code snippet to copy file from source to destination location.
+  ```
+  from("file:files/input")
+		.log("${body}")//use this line if we want to print the file content
+		.to("file:files/output");
+  ```
