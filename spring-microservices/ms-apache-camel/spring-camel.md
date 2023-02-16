@@ -32,8 +32,9 @@
 		.to("log:product-timer");
     ```
   - Following code will perform both transformation and processing.
+  
     ```
-   from("timer:product-timer")
+     from("timer:product-timer")
 		.log("${body}")  // print null
 		.transform().constant("test data")
 		.log("${body}")//print test data
