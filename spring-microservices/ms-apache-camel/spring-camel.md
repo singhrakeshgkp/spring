@@ -64,3 +64,29 @@
 		.log("${body}")//use this line if we want to print the file content
 		.to("file:files/output");
   ```
+
+# Configure Order Microservice
+- Create order ms same way as we created product MS
+
+# Active MQ Integration with Apache Camel
+### Step 1- Run Active MQ in docker
+- use following command to run active mq in docker.
+  ```
+  docker pull rmohr/activemq
+  docker run -p 61616:61616 -p 8161:8161 rmohr/activemq
+  ```
+- Use ```http://127.0.0.1:8161/``` url to access console instead of ```http://0.0.0.1:8161/``` as its updated to 127.0.0.1 location
+- Create new topic
+  - Go to  -> manage activemq broker -> topics
+ 
+### ActiveMQ+Product MS - Producing msg on topic
+- Create new Router class ```ActiveMQProductRouter.java```
+- Run the application, you will observe application will fail, as log and timer endpoint is by default configured. To resolve this error we need to add below dependency explicitly.
+  ```
+	<dependency>
+	<groupId>org.apache.camel</groupId>
+	<artifactId>camel-activemq-starter</artifactId>
+	<version>3.0.0-RC2</version>
+	</dependency>
+  ```
+- Configure active mq url in application.properties file ```spring.activemq.broker-url=tcp://localhost:61616```
