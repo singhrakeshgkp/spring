@@ -80,7 +80,7 @@
 - Create new topic
   - Go to  -> manage activemq broker -> topics
  
-### ActiveMQ+Product MS - Producing msg on topic
+# ActiveMQ+Product MS - Producing msg on topic
 - Create new Router class ```ActiveMQProductRouter.java```
 - Run the application, you will observe application will fail, as log and timer endpoint is by default configured. To resolve this error we need to add below dependency explicitly.
   ```
@@ -91,3 +91,8 @@
 	</dependency>
   ```
 - Configure active mq url in application.properties file ```spring.activemq.broker-url=tcp://localhost:61616```
+
+# Consuming the message form active MQ using Order MS
+- Configure the broker url in applicaiton.properties file
+- Create class ```OrderRouter``` order router
+- Run the application, u should be able to consume the message produced by product ms.
