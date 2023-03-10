@@ -14,8 +14,8 @@
    ```
 4. How to resolve whitelevel error in spring boot?
    we can do it by 3 ways which is given below
-   <b>Custom Error Controller</b>– where you will be implementing ErrorController  interface which is provided by SpringFramework and then overriding its getErrorPath() so that you can return a custom path whenever such type of error is occurred.
-   <b>By Displaying Custom error page</b>– All you have to do is create an error.html page and place it into the src/main/resources/templates path. The BasicErrorController of of springboot will automatically pick this file by default.
+   <b>Custom Error Controller</b>– where you will be implementing ErrorController  interface which is provided by SpringFramework and then overriding its getErrorPath() so that you can return a custom path whenever such type of error is occurred.<br/>
+   <b>By Displaying Custom error page</b>– All you have to do is create an error.html page and place it into the src/main/resources/templates path. The BasicErrorController of of springboot will automatically pick this file by default.<br/>
    <b>By disabling the whitelabel error page</b>– this is the easiest way where all you need to do is server.error.whitelabel.enabled property to false in the application.properties file to disable the whitelabel error page.
 5. j
 6.  
