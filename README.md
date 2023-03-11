@@ -24,7 +24,7 @@
    
 # Spring QA
 ### Spring core QA
-spring Core[/spingbootqa.md]
+[spring Core](/spingbootqa.md)
 ### Spring Transaction QA
 ### Spring Boot QA
 ### Spring Security QA
