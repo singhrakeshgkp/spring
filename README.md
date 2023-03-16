@@ -12,6 +12,7 @@
    - Running application on Docker using Docker
    - Running application on Docker using docker Compose
  * Spring Boot + Cassandra
+ * Spring Boot + Cassandra proj 2 (with astra db)
  * Spring Boot map struct
  * Spring data redis
  * Spring Security
@@ -22,12 +23,11 @@
    - dsfdsf
    - sdfsd
    
-  - gfg
-  - hjhk
-  - hgjh'
-  - ghh
-  - hg
-  - hghg
-  - hgjg
-  - hgjh
-  - 
+# Spring QA
+### Spring core QA
+[spring Core](/spingcoreqa.md)
+### Spring Transaction QA
+### Spring Boot QA
+[spring Boot](/spingbootqa.md)
+### Spring Security QA
+   
