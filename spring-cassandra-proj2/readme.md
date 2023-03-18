@@ -16,4 +16,7 @@
 - create ```CqlSessionBuilderCustomizer``` bean
 - now run the application.
 
+### Persisting the data form file to cassandra DB
+<hr/>
 
+- 
