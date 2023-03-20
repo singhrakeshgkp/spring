@@ -19,4 +19,6 @@
 ### Persisting the data form file to cassandra DB
 <hr/>
 
-- 
+- Copy the author and works .txt file in resources folder
+- Add file path in application.properties file
+- Create a ```DumpDataController.java``` and write the code to persist the data in DB
