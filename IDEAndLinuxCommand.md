@@ -1,6 +1,6 @@
 <details><summary>
   
-###  IDE Shortcuts
+###  IDE Shortcuts 
 </summary>
   
 #### Intellij
