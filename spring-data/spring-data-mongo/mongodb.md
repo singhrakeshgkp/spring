@@ -16,5 +16,13 @@
 - run the mongod server using command ```mongod -configdb mongodbconfig.conf
 
 ### Mongo DB basic command
+- Crate database ```use <db-name>```
+- 
 
 # Spring Data Mongo DB Concept
+
+#### CRUD Operation
+- Create new spring boot project with spring web, spring data mongo db starter, lombock, devtool dependency.
+- Start your mongo db server, add the required properties in application.properties file to establish the connection
+- Create Person model class. 
+- Create PersonRepo and PersonController class.
