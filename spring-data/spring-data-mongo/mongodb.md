@@ -13,9 +13,10 @@
     dbpath=..\data
     logpath=..\log\mongodb.log
   ```
-- run the mongod server using command ```mongod -configdb mongodbconfig.conf
+- run the mongod server using command ```mongod -configdb mongodbconfig.conf```
 
 ### Mongo DB basic command
+
 - Crate database ```use <db-name>```
 - 
 
