@@ -27,3 +27,4 @@
 - Start your mongo db server, add the required properties in application.properties file to establish the connection
 - Create Person model class. 
 - Create PersonRepo and PersonController class.
+- Perform the CRUD operation for person and write the Junit and Integration test cases.
