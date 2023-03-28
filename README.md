@@ -9,6 +9,7 @@
    - Integration + Unit Testing with Test Container
    - Docker + Docker Compose
    - Spring Transaction(declarative+Programmatic)
+   - Logback and log4j2 + custom annotation 
  * Spring Boot with GraphQL
    - Spring Boot + GraphQL
    - Unit + Integration Test
