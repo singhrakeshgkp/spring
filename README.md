@@ -1,6 +1,6 @@
 # spring
 
- * [Spring core](/spring-core/spring-core.md)
+ * [Spring core](/spring_core/spring-core.md)
  * [Spring Boot Test Container](/springboot-testcontainer/readme.md)
    - Spring Boot + Mysql DB
    - Swagger integration
