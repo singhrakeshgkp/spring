@@ -5,6 +5,7 @@
 - Blogs and URLS <br/>
 https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth  <br/>
 https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/transaction.html#tx-propagation
+https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative
 
 ### Declarative Transaction
 - Rollback does not happens for checked exception. We can modify this behaviour using ```@Transaction(rollBackFor=Excepiton.class)``` for refernce refer ```BookServiceTxnTest``` class.
