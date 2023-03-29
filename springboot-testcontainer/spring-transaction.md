@@ -16,6 +16,7 @@
 - Nested -> Execute within a nested transaction if a current transaction exists, behave like REQUIRED otherwise.
 
 ##### Propagating Reqired to Required New
+- Method involved ---> class ```BookServiceTransactionTest``` Methods ```saveBookTxnEx5, saveBookTxnEx6 ```
 ```
  case 1->(m1->m2) Propagation Required and Require_New in the same class(data will be rolled back)
                      _______________________     ___________________________________________________      ______________________________________________________
