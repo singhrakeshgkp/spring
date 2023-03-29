@@ -26,7 +26,7 @@ https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/ht
   
 Here only one transaction will be created as spring creates Transactionl BookService Proxy but you are inside BookService class and calling an inner method so no more transaction proxy involved.
 
-Case 2->(m1->m2) Propagation Required and Required_New in different class(data will not be rolled back as transaction happening in different txn)
+Case 2->(m1->m2) Propagation Required and Required_New are in different class(data will not be rolled back as transaction happening in different txn)
        
 ```
 
