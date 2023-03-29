@@ -9,9 +9,11 @@ https://spring.io/guides/gs/testing-web/
 <p>By default @SpringBootTest will not start the server. You can use webEnvironment attribute of @SpringBootTest annotation to further refine how your tests run</p>
 
 #### webEnvironment( @SpringBootTest(webEnvironment =....))
+- Mock
 - RANDOM_PORT
-- kdsfj
-- fdsjfsdk
+- DEFINED_PORT 
+- NONE
+for more details refer the documentation.
 
 
 ### @RunWith(SpringRunner.class) in JUnit5 its replaced with @ExtendWith(SpringExtension.class) :- 
