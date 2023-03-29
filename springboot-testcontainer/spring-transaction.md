@@ -9,7 +9,7 @@
 #### Transaction Propagation
 - Required -> support a current transaction, create new one if none exists. This is default behavior hence non need to speciy(or we can drop this properties).
 - Required_New -> Create a new transaction, and suspend the current transaction if one exists.
-- NOT_SUPPORTED ->Execute non-transactionally, suspend the current transaction if one exists.
+- Not_Supported ->Execute non-transactionally, suspend the current transaction if one exists.
 - Supports -> Support a current transaction, execute non-transactionally if none exists.
 - Mandatory -> upport a current transaction, throw an exception if none exists.
 - Never -> Execute non-transactionally, throw an exception if a transaction exists.
