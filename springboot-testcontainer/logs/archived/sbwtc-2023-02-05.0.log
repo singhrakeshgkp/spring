@@ -1,0 +1,100 @@
+2023-02-05 00:17:40,975 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 73368 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 73368 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-02-05 00:17:40,980 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-02-05 00:17:42,515 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-05 00:17:42,592 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 62 ms. Found 0 JDBC repository interfaces.
+2023-02-05 00:17:43,657 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-02-05 00:17:44,256 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a058df8
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a058df8
+2023-02-05 00:17:44,267 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-02-05 00:17:51,764 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplicationTests in 11.764 seconds (process running for 16.311)
+ S: Started SpringbootTestcontainerApplicationTests in 11.764 seconds (process running for 16.311)
+2023-02-05 00:17:53,946 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ S: HikariPool-1 - Shutdown initiated...
+2023-02-05 00:17:53,994 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ S: HikariPool-1 - Shutdown completed.
+2023-02-05 00:20:18,167 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 71820 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 71820 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-02-05 00:20:18,173 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-02-05 00:20:19,917 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-05 00:20:20,004 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 71 ms. Found 0 JDBC repository interfaces.
+2023-02-05 00:20:21,406 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-02-05 00:20:22,120 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39da5e49
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39da5e49
+2023-02-05 00:20:22,126 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-02-05 00:20:28,836 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplicationTests in 11.687 seconds (process running for 16.182)
+ S: Started SpringbootTestcontainerApplicationTests in 11.687 seconds (process running for 16.182)
+2023-02-05 00:20:30,682 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ S: HikariPool-1 - Shutdown initiated...
+2023-02-05 00:20:30,738 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ S: HikariPool-1 - Shutdown completed.
+2023-02-05 00:55:39,728 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 75216 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 75216 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-02-05 00:55:39,733 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-02-05 00:55:41,286 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-05 00:55:41,369 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 70 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 70 ms. Found 0 JDBC repository interfaces.
+2023-02-05 00:55:42,466 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-02-05 00:55:43,517 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ef4f627
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ef4f627
+2023-02-05 00:55:43,523 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-02-05 00:55:51,046 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplicationTests in 12.259 seconds (process running for 16.84)
+ S: Started SpringbootTestcontainerApplicationTests in 12.259 seconds (process running for 16.84)
+2023-02-05 00:55:53,079 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ S: HikariPool-1 - Shutdown initiated...
+2023-02-05 00:55:53,110 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ S: HikariPool-1 - Shutdown completed.
+2023-02-05 00:58:53,121 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 38152 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 38152 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-02-05 00:58:53,126 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-02-05 00:58:54,592 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-05 00:58:54,669 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 65 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 65 ms. Found 0 JDBC repository interfaces.
+2023-02-05 00:58:55,671 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-02-05 00:58:56,429 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e375bba
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e375bba
+2023-02-05 00:58:56,440 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-02-05 00:59:05,261 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplicationTests in 12.96 seconds (process running for 16.616)
+ S: Started SpringbootTestcontainerApplicationTests in 12.96 seconds (process running for 16.616)
+2023-02-05 00:59:07,313 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ S: HikariPool-1 - Shutdown initiated...
+2023-02-05 00:59:07,368 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ S: HikariPool-1 - Shutdown completed.
+2023-02-05 11:04:23,284 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 57088 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplicationTests using Java 17.0.5 with PID 57088 (started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-02-05 11:04:23,289 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-02-05 11:04:24,022 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-05 11:04:24,057 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+2023-02-05 11:04:24,660 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-02-05 11:04:25,119 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b56b031
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b56b031
+2023-02-05 11:04:25,122 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-02-05 11:04:27,792 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplicationTests in 5.007 seconds (process running for 6.833)
+ S: Started SpringbootTestcontainerApplicationTests in 5.007 seconds (process running for 6.833)
+2023-02-05 11:04:28,467 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ S: HikariPool-1 - Shutdown initiated...
+2023-02-05 11:04:28,495 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ S: HikariPool-1 - Shutdown completed.

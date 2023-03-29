@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 @RestController
 @Slf4j
@@ -34,11 +35,8 @@ public class PersonController {
     public ResponseEntity<Person> getPersonById(@PathVariable String id){
 
         Optional<Person> optionalPerson = personRepo.findById(id);
-        if(optionalPerson.isPresent()){
-            return new ResponseEntity<>(optionalPerson.get(),HttpStatus.OK);
-        }else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+      return  optionalPerson.map(person->new ResponseEntity(person,HttpStatus.OK))
+                .orElse(new ResponseEntity(HttpStatus.NOT_FOUND));
     }
 
     @GetMapping
@@ -56,8 +54,10 @@ public class PersonController {
     public ResponseEntity<Person> updatePerson(@RequestBody Person person){
         try{
             Optional<Person> personOptional = personRepo.findById(person.getId());
+
             if(personOptional.isEmpty())
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
             Person updatedPerson= personRepo.save(person);
             return  new ResponseEntity<>(updatedPerson,HttpStatus.OK);
         }catch(Exception ex){

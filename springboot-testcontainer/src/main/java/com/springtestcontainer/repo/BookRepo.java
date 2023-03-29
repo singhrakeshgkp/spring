@@ -3,21 +3,16 @@ package com.springtestcontainer.repo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.springtestcontainer.entity.Book;
 
-@Service
-public class BookRepo {
 
-	@Autowired
-	JdbcTemplate jdbcTemplate;
-	
-	 public List<Book> findAll() {
-	        return jdbcTemplate.query(
-	                "SELECT id, book_title, author FROM books",
-	                (rs, rowNum) -> new Book(rs.getLong("id"), rs.getString("book_title"), rs.getString("author"))
-	        );
-	    }
+public interface BookRepo extends JpaRepository<Book,Long> {
+
+    Book findByUniqueBookid(String uniqueBookid);
 }

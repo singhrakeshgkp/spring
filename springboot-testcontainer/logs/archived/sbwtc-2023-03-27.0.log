@@ -1,0 +1,46 @@
+2023-03-27 18:37:22,527 INFO o.s.b.StartupInfoLogger [main] Starting SpringbootTestcontainerApplication using Java 17.0.5 with PID 40296 (C:\workspace\proj\Spring\springboot-testcontainer\target\classes started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+ S: Starting SpringbootTestcontainerApplication using Java 17.0.5 with PID 40296 (C:\workspace\proj\Spring\springboot-testcontainer\target\classes started by rakesh-sin in C:\workspace\proj\Spring\springboot-testcontainer)
+2023-03-27 18:37:22,546 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+ S: No active profile set, falling back to 1 default profile: "default"
+2023-03-27 18:37:23,441 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+ S: Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-03-27 18:37:23,482 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+ S: Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+2023-03-27 18:37:24,504 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+ S: Tomcat initialized with port(s): 8888 (http)
+2023-03-27 18:37:24,515 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+ S: Initializing ProtocolHandler ["http-nio-8888"]
+2023-03-27 18:37:24,516 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+ S: Starting service [Tomcat]
+2023-03-27 18:37:24,516 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.1]
+ S: Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-03-27 18:37:24,709 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+ S: Initializing Spring embedded WebApplicationContext
+2023-03-27 18:37:24,712 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2093 ms
+ S: Root WebApplicationContext: initialization completed in 2093 ms
+2023-03-27 18:37:24,889 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+ S: HikariPool-1 - Starting...
+2023-03-27 18:37:25,712 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5382184b
+ S: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5382184b
+2023-03-27 18:37:25,715 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+ S: HikariPool-1 - Start completed.
+2023-03-27 18:37:27,800 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+ S: Starting ProtocolHandler ["http-nio-8888"]
+2023-03-27 18:37:27,863 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+ S: Tomcat started on port(s): 8888 (http) with context path ''
+2023-03-27 18:37:27,876 INFO o.s.b.StartupInfoLogger [main] Started SpringbootTestcontainerApplication in 6.094 seconds (process running for 8.075)
+ S: Started SpringbootTestcontainerApplication in 6.094 seconds (process running for 8.075)
+2023-03-27 18:38:12,323 INFO o.a.j.l.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+ S: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-27 18:38:12,324 INFO o.s.w.s.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+ S: Initializing Servlet 'dispatcherServlet'
+2023-03-27 18:38:12,327 INFO o.s.w.s.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 3 ms
+ S: Completed initialization in 3 ms
+2023-03-27 18:38:12,415 INFO c.s.a.LogEntryExitAspect [http-nio-8888-exec-1] className= com.springtestcontainer.controller.BookController methodName= books   started
+ S: className= com.springtestcontainer.controller.BookController methodName= books   started
+2023-03-27 18:38:12,464 INFO c.s.c.BookController [http-nio-8888-exec-1] Found a book: Book(id=1, bookTitle=spring, author=abc)
+ S: Found a book: Book(id=1, bookTitle=spring, author=abc)
+2023-03-27 18:38:12,470 INFO c.s.c.BookController [http-nio-8888-exec-1] Found a book: Book(id=2, bookTitle=cassandra, author=xyz)
+ S: Found a book: Book(id=2, bookTitle=cassandra, author=xyz)
+2023-03-27 18:38:12,472 INFO c.s.a.LogEntryExitAspect [http-nio-8888-exec-1] className=com.springtestcontainer.controller.BookController methodName=books completed in-56 MILLIS
+ S: className=com.springtestcontainer.controller.BookController methodName=books completed in-56 MILLIS
