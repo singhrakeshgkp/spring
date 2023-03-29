@@ -34,14 +34,23 @@ Case 2->(m1->m2) Propagation Required and Required_New are in different class(da
 <hr/>
 
 - Default
-- Read_Committed (avoid Dirty read problems)
+- Read_Committed (avoid Dirty read problem ony)
   ```
   customer initial balance is 10
   T1-----------------------Reads(30)-----------------------------------------------------------------
-  T2-------Read(10)-------Make changes(10+20)------> RolllBack changes (10)-------------------------------
+  T2-------Read(10)-------Make changes(10+20)------> RolllBack changes (10)--------------------------
+  
   ```
 - Read_UnCommitted
-- Repeatable_Read
-- Serializable
+- Repeatable_Read (avoid dirty read and repeatable read problems)
+  ```
+  T1-----Read(10)---do some processing--> again read this time it will get 30--->-
+  T2-----Read(10)-----> makeChanges(10+20=30) and commit changes--->----
+  ```
+- Serializable(avoid dirty read, repeatable read and phantom read problem)
+ ```
+ T1-----getAllRecord(10)--------> again getAllRecord(11)---> (in the begning it gets 10 and at the end 11 this kind of problem known as phantom read)
+ T2-----------------------AddOneRecord(1)------------------>
+ ```
 
 ### Programmatic Transaction
