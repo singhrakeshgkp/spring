@@ -30,4 +30,18 @@ Case 2->(m1->m2) Propagation Required and Required_New are in different class(da
        
 ```
 
+### Transaction Isolation level
+<hr/>
+
+- Default
+- Read_Committed (avoid Dirty read problems)
+  ```
+  customer initial balance is 10
+  T1-----------------------Reads(30)-----------------------------------------------------------------
+  T2-------Read(10)-------Make changes(10+20)------> RolllBack changes (10)-------------------------------
+  ```
+- Read_UnCommitted
+- Repeatable_Read
+- Serializable
+
 ### Programmatic Transaction
