@@ -1,5 +1,5 @@
 # Spring Transactions
-- Blogs and URLS
+- Blogs and URLS <br/>
 https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth  <br/>
 https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/transaction.html#tx-propagation
 
