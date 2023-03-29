@@ -22,7 +22,7 @@ https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/ht
 ##### Propagating Reqired to Required New
 - Method involved ---> class ```BookServiceTxnTest``` Methods ```saveBookTxnEx5, saveBookTxnEx6 ```
 ```
- case 1->(m1->m2) Propagation Required and Require_New in the same class(data will be rolled back)
+ case 1->(m1->m2) Propagation Required and Require_New are in the same class(data will be rolled back)
   
 Here only one transaction will be created as spring creates Transactionl BookService Proxy but you are inside BookService class and calling an inner method so no more transaction proxy involved.
 
