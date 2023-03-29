@@ -18,8 +18,10 @@
 ##### Propagating Reqired to Required New
 ```
  case 1->(m1->m2) Propagation Required and Require_New in the same class(data will be rolled back)
-                        @Transactinal           @Transactonal(value=Transaction.TxType.Required)       @Transactonal(value=Transaction.TxType.Require_New)  
- BookServiceTest---->  BooKServiceProxy-------> BookServiceImpl#saveBookTxnEx5  ------------------------>BookServiceImpl#saveBookTxnEx5
+                     _______________________     ___________________________________________________      ______________________________________________________
+                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  |
+ BookServiceTest--> |  BooKServiceProxy    |---> |BookServiceImpl#saveBookTxnEx5                   |----->|BookServiceImpl#saveBookTxnEx5                       |
+                    |______________________|     |_________________________________________________|      |_____________________________________________________|
 Here only one transaction will be created as spring creates Transactionl BookService Proxy but you are inside BookService class and calling an inner method so no more transaction proxy involved.
 
 Case 2->(m1->m2) Propagation Required and Required_New in different class(data will not be rolled back as transaction happening in different txn)
