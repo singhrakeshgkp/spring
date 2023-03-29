@@ -1,4 +1,7 @@
 # Spring Transactions
+- How @Transactonal Works ?
+  - Spring detects @Transactional annotation on a bean, it creates a dynamic proxy of that bean.
+  - The proxy has access to transaction manager and will ask to open and close the transaction/connection
 - Blogs and URLS <br/>
 https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth  <br/>
 https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/transaction.html#tx-propagation
