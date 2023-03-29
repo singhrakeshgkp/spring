@@ -11,7 +11,7 @@ https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/ht
     ```@Transactional(rollbackOn={Exception.class})``` properties. Now transaction will be rolled back for all the Exceptions and its child classes.<br/>
     for above scenario refer test cases ```saveBookTxnEx1, saveBookTxnEx2, saveBookTxnEx3 and saveBookTxnEx4``` written in ```BookServiceTxnTest``` class.
 #### Transaction Propagation
-- Required -> support a current transaction, create new one if none exists. This is default behavior hence non need to speciy(or we can drop this properties).
+- Required -> support a current transaction, create new one if none exists. This is default behavior hence no need to specify it(or we can drop this properties).
 - Required_New -> Create a new transaction, and suspend the current transaction if one exists.
 - Not_Supported ->Execute non-transactionally, suspend the current transaction if one exists.
 - Supports -> Support a current transaction, execute non-transactionally if none exists.
