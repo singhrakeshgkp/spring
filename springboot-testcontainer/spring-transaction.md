@@ -25,10 +25,11 @@
 Here only one transaction will be created as spring creates Transactionl BookService Proxy but you are inside BookService class and calling an inner method so no more transaction proxy involved.
 
 Case 2->(m1->m2) Propagation Required and Required_New in different class(data will not be rolled back as transaction happening in different txn)
+                     _______________________      _________________________________________________       ______________________________________________________
+                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  |
+ BookServiceTest--> |  BooKServiceProxy    |---> |BookServiceTestImpl#saveBookTxnEx5               |----->|BookServiceImpl#saveBookTxnEx5                       |
+                    |______________________|     |_________________________________________________|      |_____________________________________________________|
 
-                        @Transactinal           @Transactonal(value=Transaction.TxType.Required)       @Transactonal(value=Transaction.TxType.Require_New)  
- BookServiceTest---->  BooKServiceProxy-------> BookServiceImplTxnTest#saveBookTxnEx5  ------------------>BookServiceImpl#saveBookTxnEx5
-  
 ```
 
 ### Programmatic Transaction
