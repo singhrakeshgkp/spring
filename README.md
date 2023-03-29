@@ -1,4 +1,6 @@
 # spring
+
+ * [Spring core](/spring_core/spring-core.md)
  * [Spring Boot Test Container](/springboot-testcontainer/readme.md)
    - Spring Boot + Mysql DB
    - Swagger integration
@@ -7,6 +9,7 @@
    - Integration + Unit Testing with Test Container
    - Docker + Docker Compose
    - Spring Transaction(declarative+Programmatic)
+   - Logback and log4j2 + custom annotation 
  * Spring Boot with GraphQL
    - Spring Boot + GraphQL
    - Unit + Integration Test
@@ -29,10 +32,11 @@
 * Spring data
   - [Spring data mongodb](/spring-data/spring-data-mongo/mongodb.md)
 # Spring QA
-### Spring core QA
+##### Spring core QA
 [spring Core](/spingcoreqa.md)
-### Spring Transaction QA
-### Spring Boot QA
+##### Spring Transaction QA
+##### Spring Boot QA
 [spring Boot](/spingbootqa.md)
-### Spring Security QA
+##### Spring Security QA
+##### [Spring Testing QA](/spring-testing.md)
    
