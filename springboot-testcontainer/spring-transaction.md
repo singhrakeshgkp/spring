@@ -1,11 +1,11 @@
 
 ### Declarative Transaction
-- Rollback does not happens for checked exception. We can modify this behaviour using ```@Transaction(rollBackFor=Excepiton.class)``` for refernce refer ```BookServiceTransactionTest``` class.
+- Rollback does not happens for checked exception. We can modify this behaviour using ```@Transaction(rollBackFor=Excepiton.class)``` for refernce refer ```BookServiceTxnTest``` class.
   - Throwing unchecked exception from BookService explicitly-> transaction should be rolled back
   - Throwing Checked exception-> Transction bill not be roll back.
   - Modifying default behaviour using 
     ```@Transactional(rollbackOn={Exception.class})``` properties. Now transaction will be rolled back for all the Exceptions and its child classes.<br/>
-    for above scenario refer test cases ```saveBookTxnEx1, saveBookTxnEx2, saveBookTxnEx3 and saveBookTxnEx4``` written in ```BookServiceTransactionTest``` class.
+    for above scenario refer test cases ```saveBookTxnEx1, saveBookTxnEx2, saveBookTxnEx3 and saveBookTxnEx4``` written in ```BookServiceTxnTest``` class.
 #### Transaction Propagation
 - Required -> support a current transaction, create new one if none exists. This is default behavior hence non need to speciy(or we can drop this properties).
 - Required_New -> Create a new transaction, and suspend the current transaction if one exists.
@@ -16,19 +16,17 @@
 - Nested -> Execute within a nested transaction if a current transaction exists, behave like REQUIRED otherwise.
 
 ##### Propagating Reqired to Required New
-- Method involved ---> class ```BookServiceTransactionTest``` Methods ```saveBookTxnEx5, saveBookTxnEx6 ```
+- Method involved ---> class ```BookServiceTxnTest``` Methods ```saveBookTxnEx5, saveBookTxnEx6 ```
 ```
  case 1->(m1->m2) Propagation Required and Require_New in the same class(data will be rolled back)
                      _______________________     ___________________________________________________      ______________________________________________________
-                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  |
- BookServiceTest--> |  BooKServiceProxy    |---> |BookServiceImpl#saveBookTxnEx5                   |----->|BookServiceImpl#saveBookTxnEx5                       |
+                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  | BookServiceTxnTest->|  BooKServiceProxy    |---> |BookServiceImpl#saveBookTxnEx5                   |--->|BookServiceImpl#saveBookTxnEx5                         |
                     |______________________|     |_________________________________________________|      |_____________________________________________________|
 Here only one transaction will be created as spring creates Transactionl BookService Proxy but you are inside BookService class and calling an inner method so no more transaction proxy involved.
 
 Case 2->(m1->m2) Propagation Required and Required_New in different class(data will not be rolled back as transaction happening in different txn)
                      _______________________      _________________________________________________       ______________________________________________________
-                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  |
- BookServiceTest--> |  BooKServiceProxy    |---> |BookServiceTestImpl#saveBookTxnEx5               |----->|BookServiceImpl#saveBookTxnEx5                       |
+                    |  @Transactinal       |     |@Transactonal(value=Transaction.TxType.Required) |      |@Transactonal(value=Transaction.TxType.Require_New)  | BookServiceTxnTest->|  BooKServiceProxy    |---> |BookServiceTxnDemo#testRequireNew                |----->|BookServiceImpl#saveBookTxnEx6                       |
                     |______________________|     |_________________________________________________|      |_____________________________________________________|
 
 ```
