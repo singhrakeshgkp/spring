@@ -28,3 +28,12 @@
 - Create Person model class. 
 - Create PersonRepo and PersonController class.
 - Perform the CRUD operation for person and write the Junit and Integration test cases.
+
+#### Testing PersonController
+- Create ```PersonControllerIntegrationTest1.java``` class
+- Annotate class with ```@SpringBootTest``` annotation, this annotation will load the complete application context.
+  ```
+  @SpringBootTest
+  public class PersonControllerIntegrationTest1 
+  ```
+- 
