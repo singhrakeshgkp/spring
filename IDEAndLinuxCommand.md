@@ -14,6 +14,7 @@
   Remove unused import ->             ctr+alt+o
   To format code ->                   ctrl+Alt+L
   To Delete a Line                    ctr+Y
+  To Run Application                  shift+F10
   
   
   
