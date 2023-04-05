@@ -11,6 +11,9 @@ https://www.youtube.com/watch?v=BVk54NRRFsY
 
 
 # Core java
+1. https://www.youtube.com/@java/videos
+2. Java BY Venkat Subramaniam
+3. 
 
 # Data Structure
 
