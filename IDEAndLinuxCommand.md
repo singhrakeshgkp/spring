@@ -18,6 +18,7 @@
   To Delete Current Line --------->   Ctrl+Y
   To Duplicate Current Line ------>   Ctrl+D 
   Redo Operation            ------>   Ctrl+Shift+Z
+  Quick Search(Stiring)     ------>   Ctrl+Shift+F
   
 ```
 </details>
