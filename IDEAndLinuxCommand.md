@@ -17,6 +17,7 @@
   To Run Application                  shift+F10
   To Delete Current Line --------->   Ctrl+Y
   To Duplicate Current Line ------>   Ctrl+D 
+  Redo Operation            ------>   Ctrl+Shift+Z
   
 ```
 </details>
