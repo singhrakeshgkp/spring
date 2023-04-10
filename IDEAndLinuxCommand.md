@@ -15,8 +15,8 @@
   To format code ->                   ctrl+Alt+L
   To Delete a Line                    ctr+Y
   To Run Application                  shift+F10
-  
-  
+  To Delete Current Line --------->   Ctrl+Y
+  To Duplicate Current Line ------>   Ctrl+D 
   
 ```
 </details>
