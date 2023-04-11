@@ -9,6 +9,9 @@ https://docs.spring.io/spring-data/data-document/docs/current/reference/html/
 https://www.youtube.com/watch?v=BVk54NRRFsY
 #### Reactive Spring by->(Josh Long, Pivotal) DevOxxx, SPring.IO
 
+#### Spring 6
+#### Josh Long You Tube
+https://www.youtube.com/watch?v=SqocaOJHFF4
 
 # Core java
 1. https://www.youtube.com/@java/videos
