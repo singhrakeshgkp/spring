@@ -22,6 +22,6 @@ https://www.youtube.com/watch?v=BVk54NRRFsY
 ### Spring
 - Spring Developer https://www.youtube.com/@SpringSourceDev/videos
 - 
-- Josh Long  https://www.youtube.com/watch?v=SqocaOJHFF4
+- Josh Long Spring 6  https://www.youtube.com/watch?v=SqocaOJHFF4
 
 
