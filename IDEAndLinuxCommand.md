@@ -22,7 +22,7 @@
   To Organize Imports       ------>   Ctrl+Alt+O
   To check references       ------>   Alt+F7
   To navigate/go to impl class --->   Ctrl+Alt+B
-  
+  Current File path        ------->   Ctrl+Alt+F12
   
 ```
 </details>
