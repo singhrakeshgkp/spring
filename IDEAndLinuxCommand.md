@@ -13,7 +13,16 @@
   Search Everywhere                   double shift
   Remove unused import ->             ctr+alt+o
   To format code ->                   ctrl+Alt+L
-  
+  To Delete a Line                    ctr+Y
+  To Run Application                  shift+F10
+  To Delete Current Line --------->   Ctrl+Y
+  To Duplicate Current Line ------>   Ctrl+D 
+  Redo Operation            ------>   Ctrl+Shift+Z
+  Quick Search(Stiring)     ------>   Ctrl+Shift+F
+  To Organize Imports       ------>   Ctrl+Alt+O
+  To check references       ------>   Alt+F7
+  To navigate/go to impl class --->   Ctrl+Alt+B
+  Current File path        ------->   Ctrl+Alt+F12
   
 ```
 </details>
