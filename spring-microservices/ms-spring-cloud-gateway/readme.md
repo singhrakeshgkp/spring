@@ -13,3 +13,8 @@
 - j
 - 
 ## Book Service
+- Crate new Spring boot applicatio with following dependencies
+  - Observability --> actuator, Prometheus, openelementry agent
+  - Security ---> Oauth2 resource server
+  - Testing ---> keycloak test container
+  
