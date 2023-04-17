@@ -11,6 +11,7 @@ Click [here](/spring-microservices/ms-apache-camel/spring-camel.md) for more det
 ## Event Driven Microservices (Saga Pattern) with Apache Kafka
 
 ## Spring MS 
+- Ref https://www.youtube.com/watch?v=jkP199zzknw
 - Spring cloud Gateway
 - Circuit Breaker
   - djfd
