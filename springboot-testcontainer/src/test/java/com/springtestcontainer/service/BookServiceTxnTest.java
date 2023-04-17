@@ -35,7 +35,7 @@ public class BookServiceTxnTest {
         Book book = new Book();
         book.setUniqueBookid("123RJavaBook");
         book.setAuthor("rakesh");
-       Book book1=  bookServiceImpl.saveBookTxnEx1(book);
+        Book book1=  bookServiceImpl.saveBookTxnEx1(book);
         Assertions.assertEquals("123RJavaBook",book1.getUniqueBookid());
     }
 
