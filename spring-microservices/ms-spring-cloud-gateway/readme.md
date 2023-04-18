@@ -19,6 +19,6 @@
   - Security ---> Oauth2 client 
   - Redis ---> Redis Reactive
 - configure routes filter and predicates in application.yml file
-- now try to access the book endpoint via gateway ```http://localhost:6000/books```, it should produce same response with additional header 
+- now try to access the book endpoint via gateway ```http://localhost:8080/books```, it should produce same response with additional header 
 
   
