@@ -3,6 +3,13 @@
 ###  IDE Shortcuts and configuration
 </summary>
   
+#### Eclipse/ STS
+  ```
+  Text Search                          Ctrl + H 
+  Find selected text                   Ctrl + Alt + G
+  To see the list of avail impl        Ctrl + H 
+  
+  ```
 #### Intellij
 
 - By default in intellij code completion is case sensitive to disable it go to setting-> Editor->General->code completion untick match case.
