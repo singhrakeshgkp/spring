@@ -39,10 +39,17 @@ for distributed tracing configure the graphana</p>
 - now access ```http://localhost:8080/actuator``` this will provide all the endpoints (including prometheus)
 - Now pull prometheus image ```docker pull prom/prometheus```
 - Create ```prometheus.yml``` file and run prometheus using command ```run -p 9090:9090 -v C:\workspace\proj\Spring\spring-microservices\ms-spring-cloud-gateway\edge-service\src\main\resources\prometheus.yml prom/prometheus```
-- Prometheus is up and running on given port, in my case it is ```9090``` prometheus is accessible on ```http://localhost:9090``` url.  
-  
+- Prometheus is up and running on given port, in my case it is ```9090``` prometheus is accessible on ```http://localhost:9090``` or ```http://ip:9090``` url.  
+ 
+### Configure Grafana
 - pull the docker grafana image ```docker pull grafana/grafana```
 - run Grafana ```docker run -d -p 3000:3000 grafana/grafana```
 - now access the url ```localhost:3000```, it will ask password which is admin/admin, it will ask to reset it. provided ```12345```
-- add prometheus as data source ```k```
+- add prometheus as data source ```http://ip<where prometheus running localhost>:9090<port>``` save and test
+- Create a Dasshboard for metrics
+# configure Loki with Grafana
+- [installation guide](https://grafana.com/docs/loki/latest/installation/docker/)
+- run the command given on the above installation guide link
+- now loki and promtail is running, try to access loki using ```http://192.168.56.1<localhost ip or localhost>:3100/metrics``` url
+- Go to grafana, setting--> dataSource-> add loki data source
   
