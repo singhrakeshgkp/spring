@@ -3,6 +3,8 @@
 - [Request per thread](/ms-spring-cloud-gateway.jpg)
 - [Event Loop](/event-loop.jpg)
 
+# References
+- https://github.com/blueswen/spring-boot-observability#explore-with-grafana
 # Part 1
 <p>Configure book service and edge service access the books service via gateway.
 for distributed tracing configure the graphana</p>
