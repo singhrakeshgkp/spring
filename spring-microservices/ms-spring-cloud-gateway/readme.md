@@ -4,7 +4,10 @@
 - [Event Loop](/event-loop.jpg)
 
 # References
+### Observability
 - https://github.com/blueswen/spring-boot-observability#explore-with-grafana
+- Open Telementry Configuration https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md#jaeger-exporter
+- 
 # Part 1
 <p>Configure book service and edge service access the books service via gateway.
 for distributed tracing configure the graphana</p>
