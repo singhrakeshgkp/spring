@@ -2,7 +2,7 @@
 ## Table of contents
 
 - [Microservices](#microservices)
-  - [Part1](#Part1)
+  - [Part1](#part-1)
     - [Book Service](#book-service)
     - [Edge Service](#edge-service)
 - [Diagrams](#diagrams)
