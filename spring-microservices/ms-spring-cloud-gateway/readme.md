@@ -22,6 +22,7 @@
 
 ## References
 ### Observability
+- https://github.com/ThomasVitale/spring-cloud-gateway-resilience-security-observability
 - Grafana Tempo Integration https://grafana.com/docs/tempo/latest/
 - Grafana Loki configuration https://github.com/blueswen/spring-boot-observability#explore-with-grafana
 - Open Telementry Configuration https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md#jaeger-exporter
