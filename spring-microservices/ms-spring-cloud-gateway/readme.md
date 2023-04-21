@@ -7,18 +7,23 @@
     - [Edge Service](#edge-service)
 - [Diagrams](#diagrams)
 - [References](#references)
+  - [Observability](#observability)
+  - [Spring Cloud Gateway](#spring-cloud-gateway)
 
 ### Diagrams
 - [Request per thread](/thread-per-req.jpg)
 - [Request per thread](/ms-spring-cloud-gateway.jpg)
 - [Event Loop](/event-loop.jpg)
 
-# References
+## References
 ### Observability
 - Grafana Tempo Integration https://grafana.com/docs/tempo/latest/
 - Grafana Loki configuration https://github.com/blueswen/spring-boot-observability#explore-with-grafana
 - Open Telementry Configuration https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md#jaeger-exporter
 - Additional https://github.com/build-on-aws/instrumenting-java-apps-using-opentelemetry/blob/main/docker-compose.yaml
+### Spring Cloud Gateway
+
+
 ## Part 1
 <p>Configure book service and edge service access the books service via gateway.
 for distributed tracing configure the graphana</p>
