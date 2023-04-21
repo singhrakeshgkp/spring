@@ -5,10 +5,15 @@
   - [Part1](#part-1)
     - [Book Service](#book-service)
     - [Edge Service](#edge-service)
+ - [Part2](#part-2)
+   - [Monitoring and Management](#monitoring-and-management)
+   
 - [Diagrams](#diagrams)
 - [References](#references)
   - [Observability](#observability)
   - [Spring Cloud Gateway](#spring-cloud-gateway)
+
+
 
 ## Diagrams
 - [Request per thread](/thread-per-req.jpg)
@@ -48,6 +53,32 @@ for distributed tracing configure the graphana</p>
   - Redis ---> Redis Reactive
 - configure routes filter and predicates in application.yml file
 - now try to access the book endpoint via gateway ```http://localhost:8080/books```, it should produce same response with additional header 
+
+## Part 2
+### Monitoring and Management
+- Spring boot actuators checks
+  - Health
+  - Metrics(Prometheus Open metrics)
+  - Flyway, Thread Dumps, Heap Dumps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Configure Grafana and Prometheus
 ### Configure Prometheus
