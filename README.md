@@ -3,7 +3,7 @@
 ## Table of contents
 - Spring
 - Spring Cloud
-  - [Spring Cloud Gateway](../pring-cloud-gateway/readme.md)
+  - [Spring Cloud Gateway](https://github.com/singhrakeshgkp/spring-cloud-gateway/blob/main/readme.md)
 
 
 
