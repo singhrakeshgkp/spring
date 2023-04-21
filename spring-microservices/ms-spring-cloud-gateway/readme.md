@@ -23,7 +23,8 @@
 <p>Configure book service and edge service access the books service via gateway.
 for distributed tracing configure the graphana</p>
 
-### Book Service - Accessing book endpoint directly
+### Book Service
+##### Accessing book endpoint directly
 - Crate new Spring boot applicatio with following dependencies
   - Observability --> actuator, Prometheus, openelementry agent
   - Security ---> Oauth2 resource server
@@ -31,7 +32,9 @@ for distributed tracing configure the graphana</p>
 - Create controller and write the required code to return the books
 - Now test the book endpoint using ```localhost:8181/books``` url
 
-### Edge Service part 1 - accessing book endpoint via gateway
+### Edge Service
+##### accessing book endpoint via gateway
+
 - Crate new Spring boot applicatio with following dependencies
   - Gateway ---> spring cloud gateway,reactive web
   - Observability --> actuator, Prometheus, openelementry agent
