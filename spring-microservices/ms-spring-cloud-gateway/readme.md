@@ -1,4 +1,14 @@
-# Diagram
+# Microservices with Spring Cloud Gateway
+## Table of contents
+
+- [Microservices](#microservices)
+  - [Part1](#Part1)
+    - [Book Service](#book-service)
+    - [Edge Service](#edge-service)
+- [Diagrams](#diagrams)
+- [References](#references)
+
+### Diagrams
 - [Request per thread](/thread-per-req.jpg)
 - [Request per thread](/ms-spring-cloud-gateway.jpg)
 - [Event Loop](/event-loop.jpg)
@@ -9,11 +19,11 @@
 - Grafana Loki configuration https://github.com/blueswen/spring-boot-observability#explore-with-grafana
 - Open Telementry Configuration https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md#jaeger-exporter
 - Additional https://github.com/build-on-aws/instrumenting-java-apps-using-opentelemetry/blob/main/docker-compose.yaml
-# Part 1
+## Part 1
 <p>Configure book service and edge service access the books service via gateway.
 for distributed tracing configure the graphana</p>
 
-## Book Service - Accessing book endpoint directly
+### Book Service - Accessing book endpoint directly
 - Crate new Spring boot applicatio with following dependencies
   - Observability --> actuator, Prometheus, openelementry agent
   - Security ---> Oauth2 resource server
@@ -21,7 +31,7 @@ for distributed tracing configure the graphana</p>
 - Create controller and write the required code to return the books
 - Now test the book endpoint using ```localhost:8181/books``` url
 
-## Edge Service part 1 - accessing book endpoint via gateway
+### Edge Service part 1 - accessing book endpoint via gateway
 - Crate new Spring boot applicatio with following dependencies
   - Gateway ---> spring cloud gateway,reactive web
   - Observability --> actuator, Prometheus, openelementry agent
