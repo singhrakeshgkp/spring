@@ -44,7 +44,7 @@
   - Spring cloud native
  
 * Spring Reactive
-   - [Spring Reactive](../spring-reactive/readme.md)
+   - [Spring Reactive](https://github.com/singhrakeshgkp/spring-reactive/tree/master#readme)
 # Spring QA
 ##### Spring core QA
 [spring Core](/spingcoreqa.md)
