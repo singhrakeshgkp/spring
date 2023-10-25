@@ -9,6 +9,7 @@
 
 # Spring
  * [Spring core](/spring_core/spring-core.md)
+ * [K8s](https://github.com/singhrakeshgkp/K8s#readme)
  * [Spring Boot Test Container](/springboot-testcontainer/readme.md)
    - Spring Boot + Mysql DB
    - Swagger integration
