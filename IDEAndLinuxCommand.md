@@ -3,7 +3,7 @@
 ###  IDE Shortcuts and configuration
 </summary>
   
-#### Eclipse/ STS
+#### Eclipse/ STS/Intellij with Eclipse shortkey
   ```
   Text Search                                          Ctrl + H 
   Find selected text                                   Ctrl + Alt + G
