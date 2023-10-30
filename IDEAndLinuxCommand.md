@@ -21,7 +21,8 @@
   the cursor inside the block                          Shift+Ctrl+Enter
   Format                                               Ctrl+Shift+F
   Rename selected text                                 Ctrl+Alt+Shift+T
-  
+  To move the line up and down                         Alt+up or Alt+down
+  To edit multiple line                                Opt+Opt+up/down
  
   
   
