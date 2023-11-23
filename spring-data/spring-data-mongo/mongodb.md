@@ -4,7 +4,7 @@
 - set the bin file location in your path variable(both MongoDB and mongos sh folder)
 - create data/db directory in your c:/ drive
 - open command prompt and run mongod command
-- open new command prompt and run mongos command.
+- open new command prompt and run mongosh command.
 ##### customizing log and data file location
 - create mongodb.conf file in parallel to bin directory(mongodb repo not mongos shell)
 - configure the following properties
