@@ -17,7 +17,7 @@
 
 ### Mongo DB basic command
 
-- Crate database ```use <db-name>```
+- create database ```use <db-name>```
 - 
 
 # Spring Data Mongo DB Concept
