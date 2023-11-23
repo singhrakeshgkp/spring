@@ -17,7 +17,7 @@
 
 ### Mongo DB basic command
 
-- create database ```use <db-name>```
+- create database using command ```use <db-name>```
 - 
 
 # Spring Data Mongo DB Concept
