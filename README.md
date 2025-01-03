@@ -4,7 +4,6 @@
 - [Spring](#spring)
  - [Spring Core](#spring-core)
  - [Spring Boot with GraphQL](#spring-boot-with-graphql)
- - 
  - [Spring Cloud](#spring-cloud)
   - [Spring Cloud Gateway](https://github.com/singhrakeshgkp/spring-cloud-gateway/blob/main/readme.md)
 
