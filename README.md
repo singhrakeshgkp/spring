@@ -1,14 +1,23 @@
 # spring
 
 ## Table of contents
-- Spring
-- Spring Cloud
+- [Spring](#spring)
+ - [Spring Core](#spring-core)
+ - [Spring Boot with GraphQL](#spring-boot-with-graphql)
+ - 
+ - [Spring Cloud](#spring-cloud)
   - [Spring Cloud Gateway](https://github.com/singhrakeshgkp/spring-cloud-gateway/blob/main/readme.md)
 
 
 
 # Spring
  * [Spring core](/spring_core/spring-core.md)
+ * [Spring Boot with GraphQL](springboot-graphql/README.md)
+   - **Step by step Guide to docker+spring boot**
+   - Spring Boot + GraphQL
+   - Unit + Integration Test
+   - Running application on Docker using Docker
+   - Running application on Docker using docker Compose
  * [K8s](https://github.com/singhrakeshgkp/K8s#readme)
  * [Spring Boot Test Container](/springboot-testcontainer/readme.md)
    - Spring Boot + Mysql DB
@@ -19,12 +28,6 @@
    - Docker + Docker Compose
    - Spring Transaction(declarative+Programmatic)
    - Logback and log4j2 + custom annotation 
- * [Spring Boot with GraphQL](springboot-graphql/README.md)
-   - Step by step Guide to docker+spring boot
-   - Spring Boot + GraphQL
-   - Unit + Integration Test
-   - Running application on Docker using Docker
-   - Running application on Docker using docker Compose
  * Spring Boot + Cassandra
  * Spring Boot + Cassandra proj 2 (with astra db) [more details](spring-cassandra-proj2/readme.md)
   - dsfdf
