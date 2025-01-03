@@ -1,9 +1,14 @@
-#### Docker and Docker compose
+ - [Docker](#Docker)
+   - [Docker Core](#docker-core)
+   - [Docker file description](#Docker-file-description)
+   - [Docker Command](#Docker-Command)
+- [Docker Compose](#docker-compose)
+   - [Docker compose file description](#Docker-compose-file-description)
+   - [Docker compose command](#Docker-compose-command)
+- [Sample Files](#Sample-Files)
 
-
-<details>
-<summary><b>Docker core</b></summary>
-<p>
+# Docker
+## Docker core
    
    - Docker Volume 
      - when we install and run our container such as mysql it stores the data under ``` /var/lib/mysql ``` dir
@@ -11,11 +16,7 @@
      - To avoid this we should map data directory to host machine ``` home/mysql/data ...etc ```
      - command to map volume ``` docker run -d -p 3307:3306 --net test-net --name mysqldb --env-file envfilename -v "c:/abc":var/lib/mysql mysql mysqldb  ```
    
-</p>
-</details>
-<details>
-<summary><b>Docker file description</b></summary>
-<p>
+## Docker file description
    
    - FROM openjdk:11    
      - base image which will contain jdk and OS
@@ -26,12 +27,7 @@
      - will take jar file from given path and add that to docker image and file name will be app.jar
   - ENTRYPOINT ["java","-jar","/app.jar"]
     - Entry point for the application   
-</p>
-</details>
-
-<details>
-<summary><b>Docker Command</b></summary>
-<p>
+## Docker Command
    
    - ``` docker images ``` -> list down all the available images
    - ``` docker network ls ``` -> provide the available networks
@@ -48,14 +44,9 @@
      docker run -p 9090:9090 --name app<image name> --net test-net<network name> -e MYSQL_HOST=mysqldb -e MYSQL_USER=root -e MYSQL_PASSWORD=tooroot -e MYSQL_PORT=3306 app<application image name i.e spring boot>
      ```
    - we can also refer env varriable details fom a file using command ``` docker run -p 9090:9090 --name app --net test-net --env-file env<file name> app ```
-   - 
-</p>
-</details>
 
-
-<details>
-<summary><b>Docker compose file description</b></summary>
-<p>
+# Docker Compose
+## Docker compose file description
 
    -  ``` version ``` -> docker compose file version
    -  ```  services ``` -> we can specify n number of services. service name could be anything
@@ -65,13 +56,8 @@
    - ``` container-name: springboot-test ```-> it will give the specified container name. if this prop not present in dockercompose random name will be assigned
    - ``` restart: always ``` it will try to restart the application unitl it connect to other services on whihc it has dependency such as myslqdb etc.
    
-</p>
-</details>
-   
-   
-<details>
-<summary><b>Docker compose command</b></summary>
-<p>
+### Docker compose command
+
 
    - ``` docker-compose up ``` -> it will perform following task.
      - check if image is available in the local registry.
@@ -86,13 +72,9 @@
    -  ```  docker image prune -a ``` -> Remove all images without at least one container associated to them
    -  ```  docker system prune -a ``` -> Remove many more things
    
-</p>
-</details>
 
-   
-   <details>
-<summary><b>Docker, Docker compose and application.properties sample files</b></summary>
-<p>
+# Sample Files
+## Docker, Docker compose and application.properties sample files
 
    - Docker file
    
@@ -154,6 +136,4 @@
       spring.sql.init.mode=always
 
      ```
-</p>
-</details>
 
