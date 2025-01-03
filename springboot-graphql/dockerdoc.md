@@ -1,6 +1,7 @@
  - [Docker](#Docker)
    - [Docker Core](#docker-core)
    - [Docker file description](#Docker-file-description)
+   - [Push Docker Image To Docker Hub](#push-docker-image-to-docker-hub)
    - [Docker Command](#Docker-Command)
 - [Docker Compose](#docker-compose)
    - [Docker compose file description](#Docker-compose-file-description)
@@ -27,6 +28,9 @@
      - will take jar file from given path and add that to docker image and file name will be app.jar
   - ENTRYPOINT ["java","-jar","/app.jar"]
     - Entry point for the application   
+
+## Push Docker Image To Docker Hub
+
 ## Docker Command
    
    - ``` docker images ``` -> list down all the available images
