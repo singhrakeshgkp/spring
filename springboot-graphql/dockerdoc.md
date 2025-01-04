@@ -31,8 +31,8 @@
 
 ## Push Docker Image To Docker Hub
 - Create a docker image
-- Create tag ```docker tag demo<imagename> dockerhubusername/<dockerreponame> ```
-- Push the image using ```docker push dockerhubusername/<reponame>```
+- Create tag ```docker tag demo<imagename> dockerhubusername/<dockerreponame>:<image name>```
+- Push the image using ```docker push dockerhubusername/<reponame>:<imagename>```
 ## Docker Command
    
    - ``` docker images ``` -> list down all the available images
