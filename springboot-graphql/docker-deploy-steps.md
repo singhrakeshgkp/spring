@@ -7,7 +7,7 @@ please refer given [link](/springboot-graphql/dockerdoc.md) for docker and docke
 ### Setup Frist Spring Boot Docker Project
 1. Create Spring boot application.
 2. Add Dockerfile in the root directory. Specify the required properties in docker file(for more details about dockerfile click  [here](https://docs.docker.com/engine/reference/builder/
-))\ 
+   
 3. Create docker image. To create docker image follow below steps.
    * Open command prompt
    * Navigate to your project root directory whrere dockerfile is present
