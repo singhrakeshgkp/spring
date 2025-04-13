@@ -12,7 +12,7 @@
 
 # Spring
  * [Spring core](/spring_core/spring-core.md)
- * [Docker](springboot-graphql/README.md)
+ * [Docker](https://github.com/singhrakeshgkp/spring/blob/master/springboot-graphql/docker-deploy-steps.md)
  * [Spring Boot with GraphQL](springboot-graphql/README.md)
    - **Step by step Guide to docker+spring boot**
    - Spring Boot + GraphQL
