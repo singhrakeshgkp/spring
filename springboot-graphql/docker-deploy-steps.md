@@ -1,7 +1,7 @@
 # Spring Boot with Docker
-What is docker?\
+What is docker?
 please refer given [link](/springboot-graphql/dockerdoc.md) for docker and docker compose command <br/>
-(for more details do to official website click  [here](https://docs.docker.com/get-started/overview/))\
+(for more details do to official website click  [here](https://docs.docker.com/get-started/overview/))
 
 
 ### Setup Frist Spring Boot Docker Project
