@@ -89,8 +89,8 @@
 | `Cmd + J`        | Show intention actions / quick fixes     |
 #### Eclipse/ STS/Intellij with Eclipse shortkey
   ```
-  Text Search                                          Ctrl + H 
-  Find selected text                                   Ctrl + Alt + G
+  Text Search                                          Ctrl + H   Mac ====> (Cmd + Shift + F)
+  Find selected text                                   Ctrl + Alt + G Mac====>(Option+F7)
   To see the list of avail impl                        Ctrl + H
   For warning and suggestions                          Alt + Enter
   To jump to next error                                F2
