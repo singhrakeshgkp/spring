@@ -1,9 +1,9 @@
 
 # Windows and MAC Key comparison
-- Windows                  Mac
-- Ctrl                     Command (⌘)
-- Alt                      Option (⌥)
-- Right-click / Ctrl       Control (^)
+- Windows================> Mac
+- Ctrls=================>Command (⌘)
+- Alts===================>Option (⌥)
+- Right-click / Ctrls====>Control (^)
 
 <details><summary>
   
