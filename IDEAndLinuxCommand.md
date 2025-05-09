@@ -86,6 +86,11 @@
 | `Cmd + F`                     | Find in file                       |
 | `Cmd + R`                     | Replace in file                    |
 | `Cmd + G` / `Cmd + Shift + G` | Next / Previous match              |
+|  `Cmd+Shfit+N`                | File Search                        |
+|  `Cmd+N`                      | Go To class                        |
+|   `Cmd+F12`                   | Method Search/ File Structure      |
+|
+
 
 ## 📘 Documentation & Help
 
