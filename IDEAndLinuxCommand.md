@@ -23,7 +23,8 @@
 | `Cmd + Shift + R`     | Replace in Path (replace across project)    |
 | `Cmd + P`             | Parameter Info (during method calls)        |
 | `Cmd + /`             | Toggle line comment                         |
-| `Cmd + Option + /`    | Toggle block comment                        |
+| `Cmd + Option + /`    | Toggle block comment 
+| `Cmd+Alt+B`           | Go to impoementation
 
 ## 📂 Navigation
 
