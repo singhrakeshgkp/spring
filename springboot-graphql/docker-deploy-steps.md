@@ -1,20 +1,20 @@
 # Spring Boot with Docker
-What is docker?\
+What is docker?
 please refer given [link](/springboot-graphql/dockerdoc.md) for docker and docker compose command <br/>
-(for more details do to official website click  [here](https://docs.docker.com/get-started/overview/))\
+(for more details do to official website click  [here](https://docs.docker.com/get-started/overview/))
 
 
 ### Setup Frist Spring Boot Docker Project
 1. Create Spring boot application.
-2. Add Dockerfile in the root directory. Specify the required properties in docker file(for more details about dockerfile click  [here](https://docs.docker.com/engine/reference/builder/
-))\ 
+2. Add Dockerfile in the root directory. Specify the required properties in docker file(for more details about dockerfile click  [here](https://docs.docker.com/engine/reference/builder/))
+   
 3. Create docker image. To create docker image follow below steps.
    * Open command prompt
    * Navigate to your project root directory whrere dockerfile is present
    * run below command
      ```docker build -t springboot-graphql-docker.jar[jar name] .[root directory]```
    * Verify the docker image using command docker ``` image ls ``` , your image should be there.
- 4. Run docker image using command  ``` docker run -p 8181:8787 springboot-graphql-docker.jar ```
+ 4. Run docker image using command  ``` docker run -p 8181<docker port>:8787<spring app port> springboot-graphql-docker.jar ```
  5. since we have used mysql with our spring boot application so application will not run. First we need to create docker network for mysql database. To create Docker network follow below steps.
   * Run command ``` docker pull mysql:5.7 ```
   * create docker network for spring boot application to communicate with mysql database. Here is the command to create docker network
